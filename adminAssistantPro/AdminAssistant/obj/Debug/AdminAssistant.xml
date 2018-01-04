@@ -1,0 +1,1076 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AdminAssistant
+</name>
+</assembly>
+<members>
+<member name="T:AdminAssistant.My.Resources.Resources">
+<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:AdminAssistant.My.Resources.Resources.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:AdminAssistant.My.Resources.Resources.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="P:AdminAssistant.My.Resources.Resources.evaluation">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AdminAssistant.My.Resources.Resources.test">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AdminAssistant.My.Resources.Resources.user">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.alumnoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.cicloDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.grupoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.inscripcionDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.kardexDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.listaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.maestroDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.alumno1DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.alumnoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.cicloRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.grupoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.inscripcionRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.kardexRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.listaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.maestroRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.alumno1Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.alumnoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.cicloRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.grupoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.inscripcionRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.kardexRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.listaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.maestroRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiego.alumno1RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiegoTableAdapters.alumnoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiegoTableAdapters.cicloTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiegoTableAdapters.grupoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiegoTableAdapters.inscripcionTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiegoTableAdapters.kardexTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiegoTableAdapters.listaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiegoTableAdapters.maestroTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiegoTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:AdminAssistant.EasyEnglishDataSetDiegoTableAdapters.TableAdapterManager.UpdateUpdatedRows(AdminAssistant.EasyEnglishDataSetDiego,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:AdminAssistant.EasyEnglishDataSetDiegoTableAdapters.TableAdapterManager.UpdateInsertedRows(AdminAssistant.EasyEnglishDataSetDiego,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:AdminAssistant.EasyEnglishDataSetDiegoTableAdapters.TableAdapterManager.UpdateDeletedRows(AdminAssistant.EasyEnglishDataSetDiego,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:AdminAssistant.EasyEnglishDataSetDiegoTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:AdminAssistant.EasyEnglishDataSetDiegoTableAdapters.TableAdapterManager.UpdateAll(AdminAssistant.EasyEnglishDataSetDiego)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiegoTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetDiegoTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetMani">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetMani.alumnoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetMani.cicloDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetMani.grupoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetMani.inscripcionDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetMani.kardexDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetMani.listaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetMani.maestroDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetMani.alumnoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetMani.cicloRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetMani.grupoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetMani.inscripcionRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetMani.kardexRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetMani.listaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetMani.maestroRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetMani.alumnoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetMani.cicloRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetMani.grupoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetMani.inscripcionRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetMani.kardexRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetMani.listaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetMani.maestroRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetManiTableAdapters.alumnoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetManiTableAdapters.cicloTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetManiTableAdapters.grupoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetManiTableAdapters.inscripcionTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetManiTableAdapters.kardexTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetManiTableAdapters.listaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetManiTableAdapters.maestroTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetManiTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:AdminAssistant.EasyEnglishDataSetManiTableAdapters.TableAdapterManager.UpdateUpdatedRows(AdminAssistant.EasyEnglishDataSetMani,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:AdminAssistant.EasyEnglishDataSetManiTableAdapters.TableAdapterManager.UpdateInsertedRows(AdminAssistant.EasyEnglishDataSetMani,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:AdminAssistant.EasyEnglishDataSetManiTableAdapters.TableAdapterManager.UpdateDeletedRows(AdminAssistant.EasyEnglishDataSetMani,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:AdminAssistant.EasyEnglishDataSetManiTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:AdminAssistant.EasyEnglishDataSetManiTableAdapters.TableAdapterManager.UpdateAll(AdminAssistant.EasyEnglishDataSetMani)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetManiTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:AdminAssistant.EasyEnglishDataSetManiTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.alumnoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.cicloDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.kardexDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.maestroDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTEMAESTROSDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTEGRUPOSGENERALDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTEALUMNOSINSCRITOSDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTEGRUPOSCICLOABIERTODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTEKARDEXPORALUMNODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTELISTASPORCICLODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTEALUMNOSPORSITUACIONDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTENIVELESCURSADOSPORALUMNODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.alumnoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.cicloRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.kardexRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.maestroRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTEMAESTROSRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTEGRUPOSGENERALRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTEALUMNOSINSCRITOSRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTEGRUPOSCICLOABIERTORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTEKARDEXPORALUMNORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTELISTASPORCICLORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTEALUMNOSPORSITUACIONRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTENIVELESCURSADOSPORALUMNORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.alumnoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.cicloRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.kardexRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.maestroRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTEMAESTROSRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTEGRUPOSGENERALRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTEALUMNOSINSCRITOSRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTEGRUPOSCICLOABIERTORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTEKARDEXPORALUMNORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTELISTASPORCICLORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTEALUMNOSPORSITUACIONRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiego.REPORTENIVELESCURSADOSPORALUMNORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiegoTableAdapters.alumnoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiegoTableAdapters.cicloTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiegoTableAdapters.kardexTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiegoTableAdapters.maestroTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiegoTableAdapters.REPORTEMAESTROSTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiegoTableAdapters.REPORTEGRUPOSGENERALTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiegoTableAdapters.REPORTEALUMNOSINSCRITOSTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiegoTableAdapters.REPORTEGRUPOSCICLOABIERTOTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiegoTableAdapters.REPORTEKARDEXPORALUMNOTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiegoTableAdapters.REPORTELISTASPORCICLOTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiegoTableAdapters.REPORTEALUMNOSPORSITUACIONTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiegoTableAdapters.REPORTENIVELESCURSADOSPORALUMNOTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiegoTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:AdminAssistant.MasterEADataSetDiegoTableAdapters.TableAdapterManager.UpdateUpdatedRows(AdminAssistant.MasterEADataSetDiego,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:AdminAssistant.MasterEADataSetDiegoTableAdapters.TableAdapterManager.UpdateInsertedRows(AdminAssistant.MasterEADataSetDiego,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:AdminAssistant.MasterEADataSetDiegoTableAdapters.TableAdapterManager.UpdateDeletedRows(AdminAssistant.MasterEADataSetDiego,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:AdminAssistant.MasterEADataSetDiegoTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:AdminAssistant.MasterEADataSetDiegoTableAdapters.TableAdapterManager.UpdateAll(AdminAssistant.MasterEADataSetDiego)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiegoTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetDiegoTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.alumnoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.cicloDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.kardexDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.maestroDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTEMAESTROSDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTEALUMNOSINSCRITOSDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTEKARDEXPORALUMNODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTELISTASPORCICLODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTEALUMNOSPORSITUACIONDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTEGRUPOSCICLOABIERTODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTEGRUPOSGENERALDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTENIVELESCURSADOSPORALUMNODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTEKARDEXPORALUMNOPORNIVELDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTECALIFFINALESDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.CONSTANCIANIVELACTUALDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.CONSTANCIACALIFACTUALDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.alumnoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.cicloRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.kardexRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.maestroRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTEMAESTROSRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTEALUMNOSINSCRITOSRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTEKARDEXPORALUMNORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTELISTASPORCICLORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTEALUMNOSPORSITUACIONRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTEGRUPOSCICLOABIERTORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTEGRUPOSGENERALRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTENIVELESCURSADOSPORALUMNORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTEKARDEXPORALUMNOPORNIVELRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTECALIFFINALESRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.CONSTANCIANIVELACTUALRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.CONSTANCIACALIFACTUALRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.alumnoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.cicloRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.kardexRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.maestroRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTEMAESTROSRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTEALUMNOSINSCRITOSRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTEKARDEXPORALUMNORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTELISTASPORCICLORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTEALUMNOSPORSITUACIONRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTEGRUPOSCICLOABIERTORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTEGRUPOSGENERALRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTENIVELESCURSADOSPORALUMNORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTEKARDEXPORALUMNOPORNIVELRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.REPORTECALIFFINALESRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.CONSTANCIANIVELACTUALRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSet.CONSTANCIACALIFACTUALRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetTableAdapters.alumnoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetTableAdapters.cicloTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetTableAdapters.kardexTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetTableAdapters.maestroTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetTableAdapters.REPORTEMAESTROSTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetTableAdapters.REPORTEALUMNOSINSCRITOSTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetTableAdapters.REPORTEKARDEXPORALUMNOTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetTableAdapters.REPORTELISTASPORCICLOTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetTableAdapters.REPORTEALUMNOSPORSITUACIONTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetTableAdapters.REPORTEGRUPOSCICLOABIERTOTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetTableAdapters.REPORTEGRUPOSGENERALTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetTableAdapters.REPORTENIVELESCURSADOSPORALUMNOTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetTableAdapters.REPORTEKARDEXPORALUMNOPORNIVELTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetTableAdapters.REPORTECALIFFINALESTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetTableAdapters.CONSTANCIANIVELACTUALTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetTableAdapters.CONSTANCIACALIFACTUALTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:AdminAssistant.MasterEADataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(AdminAssistant.MasterEADataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:AdminAssistant.MasterEADataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(AdminAssistant.MasterEADataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:AdminAssistant.MasterEADataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(AdminAssistant.MasterEADataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:AdminAssistant.MasterEADataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:AdminAssistant.MasterEADataSetTableAdapters.TableAdapterManager.UpdateAll(AdminAssistant.MasterEADataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:AdminAssistant.MasterEADataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15373DCD-3B0C-4C30-847A-300035FFE8E8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>AdminAssistant.My.MyApplication</StartupObject>
+    <RootNamespace>AdminAssistant</RootNamespace>
+    <AssemblyName>AdminAssistant</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>AdminAssistant.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>AdminAssistant.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Basic 2005 Power Packs\3.0\Microsoft.VisualBasic.PowerPacks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EasyEnglishDataSetDiego.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EasyEnglishDataSetDiego.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EasyEnglishDataSetMani.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EasyEnglishDataSetMani.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Alumnos\frmConsultaAlumnos.Designer.vb">
+      <DependentUpon>frmConsultaAlumnos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Alumnos\frmConsultaAlumnos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Maestros\frmConsultaMaestros.Designer.vb">
+      <DependentUpon>frmConsultaMaestros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Maestros\frmConsultaMaestros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Alumnos\frmRegistroAlumno.Designer.vb">
+      <DependentUpon>frmRegistroAlumno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Alumnos\frmRegistroAlumno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Maestros\frmRegistroMaestro.Designer.vb">
+      <DependentUpon>frmRegistroMaestro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Maestros\frmRegistroMaestro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBitacora.Designer.vb">
+      <DependentUpon>frmBitacora.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBitacora.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCalificacionesDet.Designer.vb">
+      <DependentUpon>frmCalificacionesDet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCalificacionesDet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKardexAlumno.Designer.vb">
+      <DependentUpon>frmKardexAlumno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmKardexAlumno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistroUsuarios.Designer.vb">
+      <DependentUpon>frmRegistroUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistroUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteCalifFinales.Designer.vb">
+      <DependentUpon>frmReporteCalifFinales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteCalifFinales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteKardex.Designer.vb">
+      <DependentUpon>frmReporteKardex.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteKardex.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteListas.Designer.vb">
+      <DependentUpon>frmReporteListas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteListas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportes.Designer.vb">
+      <DependentUpon>frmReportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRespaldarBD.Designer.vb">
+      <DependentUpon>frmRespaldarBD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRespaldarBD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRestaurarBD.Designer.vb">
+      <DependentUpon>frmRestaurarBD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRestaurarBD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimientos\Asignar calificacion\frmAsignarCalificacion.Designer.vb">
+      <DependentUpon>frmAsignarCalificacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\Asignar calificacion\frmAsignarCalificacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterEADataSetDiego.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MasterEADataSetDiego.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\Abrir grupo\frmGruposRegistro.Designer.vb">
+      <DependentUpon>frmGruposRegistro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\Abrir grupo\frmGruposRegistro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterEADataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MasterEADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="Movimientos\Inscripción\frmConsultaInscripciones.Designer.vb">
+      <DependentUpon>frmConsultaInscripciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\Inscripción\frmConsultaInscripciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimientos\Inscripción\frmInscripciones.Designer.vb">
+      <DependentUpon>frmInscripciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\Inscripción\frmInscripciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="principal.Designer.vb">
+      <DependentUpon>principal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteSituacion.Designer.vb">
+      <DependentUpon>ReporteSituacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteSituacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Catalogos\Alumnos\frmConsultaAlumnos.resx">
+      <DependentUpon>frmConsultaAlumnos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Maestros\frmConsultaMaestros.resx">
+      <DependentUpon>frmConsultaMaestros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Alumnos\frmRegistroAlumno.resx">
+      <DependentUpon>frmRegistroAlumno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Maestros\frmRegistroMaestro.resx">
+      <DependentUpon>frmRegistroMaestro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBitacora.resx">
+      <DependentUpon>frmBitacora.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCalificacionesDet.resx">
+      <DependentUpon>frmCalificacionesDet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKardexAlumno.resx">
+      <DependentUpon>frmKardexAlumno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistroUsuarios.resx">
+      <DependentUpon>frmRegistroUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteCalifFinales.resx">
+      <DependentUpon>frmReporteCalifFinales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteKardex.resx">
+      <DependentUpon>frmReporteKardex.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteListas.resx">
+      <DependentUpon>frmReporteListas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportes.resx">
+      <DependentUpon>frmReportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRespaldarBD.resx">
+      <DependentUpon>frmRespaldarBD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRestaurarBD.resx">
+      <DependentUpon>frmRestaurarBD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimientos\Asignar calificacion\frmAsignarCalificacion.resx">
+      <DependentUpon>frmAsignarCalificacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimientos\Abrir grupo\frmGruposRegistro.resx">
+      <DependentUpon>frmGruposRegistro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimientos\Inscripción\frmConsultaInscripciones.resx">
+      <DependentUpon>frmConsultaInscripciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimientos\Inscripción\frmInscripciones.resx">
+      <DependentUpon>frmInscripciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="principal.resx">
+      <DependentUpon>principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteCalifActuales.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteConstanciaNivel.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteConstanciaFinal.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteCalifFinales.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteKardexPorAlumnoPorNivel.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteNivelesCursados.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteSituacionAlumnos.rdlc" />
+    <EmbeddedResource Include="ReporteSituacion.resx">
+      <DependentUpon>ReporteSituacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteListasPorCiclo.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteKardexPorAlumno.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteGrupoCicloAbierto.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteGruposGeneral.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteAlumnosInscritos.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteMaestros.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EasyEnglishDataSetDiego.xsc">
+      <DependentUpon>EasyEnglishDataSetDiego.xsd</DependentUpon>
+    </None>
+    <None Include="EasyEnglishDataSetDiego.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EasyEnglishDataSetDiego.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EasyEnglishDataSetDiego.xss">
+      <DependentUpon>EasyEnglishDataSetDiego.xsd</DependentUpon>
+    </None>
+    <None Include="EasyEnglishDataSetMani.xsc">
+      <DependentUpon>EasyEnglishDataSetMani.xsd</DependentUpon>
+    </None>
+    <None Include="EasyEnglishDataSetMani.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EasyEnglishDataSetMani.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EasyEnglishDataSetMani.xss">
+      <DependentUpon>EasyEnglishDataSetMani.xsd</DependentUpon>
+    </None>
+    <None Include="MasterEADataSet.xsc">
+      <DependentUpon>MasterEADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MasterEADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MasterEADataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MasterEADataSet.xss">
+      <DependentUpon>MasterEADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MasterEADataSetDiego.xsc">
+      <DependentUpon>MasterEADataSetDiego.xsd</DependentUpon>
+    </None>
+    <None Include="MasterEADataSetDiego.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MasterEADataSetDiego.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MasterEADataSetDiego.xss">
+      <DependentUpon>MasterEADataSetDiego.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Ayuda\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\evaluation.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
