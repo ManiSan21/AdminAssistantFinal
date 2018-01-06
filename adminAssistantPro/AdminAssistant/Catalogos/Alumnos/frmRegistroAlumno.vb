@@ -4,162 +4,152 @@ Public Class frmRegistroAlumno
     Dim contFallas As Integer
     Dim banModificar As Boolean = False
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
-        Me.Close()
-        txtNombre.Enabled = False
-        txtDomicilio.Enabled = False
-        txtEstado.Enabled = False
-        txtCorreo.Enabled = False
-        txtTel.Enabled = False
-        txtTelEmergencia.Enabled = False
-        txtCiudad.Enabled = False
-        txtUNA.Enabled = False
-        cboSituacion.Enabled = False
-        dtpFechaNa.Enabled = False
-        btnBuscarF.Enabled = False
+        'Cerrando conexion
+
     End Sub
 
     Private Sub frmRegistroAlumno_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Try
-            'TODO: esta línea de código carga datos en la tabla 'MasterEADataSetDiego.alumno' Puede moverla o quitarla según sea necesario.
-            'Me.AlumnoTableAdapter1.Fill(Me.MasterEADataSetDiego.alumno)
-            'TODO: esta línea de código carga datos en la tabla 'EasyEnglishDataSetMani.alumno' Puede moverla o quitarla según sea necesario.
-            Me.AlumnoTableAdapter.Fill(Me.MasterEADataSet.alumno)
+        'Abriendo conexion
+        'Nota: Incorporar un try para la conexion
 
-            btnPrimero.Enabled = True
-            btnSiguiente.Enabled = True
-            btnAnterior.Enabled = True
-            btnUltimo.Enabled = True
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
     End Sub
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
-        conexionsql.Open()
-        Try
-            If banModificar = False Then
-                comando.CommandText = "Insert into kardex(idAlumno, n1, n2, n3, n4, n5, n6, n7,	n8, n9, n10, n11, n12) values(" & CInt(txtNoControl.Text) & "," & CDec(0) & "," & CDec(0) & "," & CDec(0) & "," & CDec(0) & "," & CDec(0) & "," & CDec(0) & "," & CDec(0) & "," & CDec(0) & "," & CDec(0) & "," & CDec(0) & "," & CDec(0) & "," & CDec(0) & ")"
-                comando.ExecuteNonQuery()
-                conexionsql.Close()
-                AlumnoBindingSource.EndEdit()
-                AlumnoBindingSource.Current(9) = ubicacion
-                SqlDataAdapter1.Update(MasterEADataSet.alumno)
+        'botones
+        btnNuevo.Enabled = True
+        btnAceptar.Enabled = False
+        btnCancelar.Enabled = False
+        btnSalir.Enabled = True
+        btnBuscarF.Enabled = False
 
-                MasterEADataSet.Clear()
-                AlumnoTableAdapter.Update(MasterEADataSet.alumno)
-                SqlDataAdapter1.Fill(MasterEADataSet.alumno)
-                AlumnoTableAdapter.Fill(MasterEADataSet.alumno)
-            Else
-                conexionsql.Close()
-                AlumnoBindingSource.EndEdit()
-                AlumnoBindingSource.Current(9) = ubicacion
-                SqlDataAdapter1.Update(MasterEADataSet.alumno)
-
-                MasterEADataSet.Clear()
-                AlumnoTableAdapter.Update(MasterEADataSet.alumno)
-                SqlDataAdapter1.Fill(MasterEADataSet.alumno)
-                AlumnoTableAdapter.Fill(MasterEADataSet.alumno)
-            End If
-        Catch ex2 As Exception
-            MsgBox(ex2.Message)
-        End Try
-        'Se bloquean los controles principales
+        'Bloqueo de txt
         txtNombre.Enabled = False
         txtDomicilio.Enabled = False
-        txtEstado.Enabled = False
-        txtCorreo.Enabled = False
         txtTel.Enabled = False
         txtTelEmergencia.Enabled = False
         txtCiudad.Enabled = False
-        txtUNA.Enabled = False
-        cboSituacion.Enabled = False
-        dtpFechaNa.Enabled = False
-        btnBuscarF.Enabled = False
-        banModificar = False
+        txtCorreo.Enabled = False
+        cboEscuela.Enabled = False
+        txtControlExterno.Enabled = False
 
-        btnPrimero.Enabled = True
-        btnSiguiente.Enabled = True
-        btnAnterior.Enabled = True
-        btnUltimo.Enabled = True
+        'Validaciones
+        If (IsNothing(txtNombre.Text)) Then
+            MessageBox.Show("Error, falta de informaciòn", "No se ha ingresado nombre", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            txtNombre.Focus()
+        Else
+            If (IsNothing(txtDomicilio.Text)) Then
+                MessageBox.Show("Error, falta de informaciòn", "No se ha ingresado domicilio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                txtDomicilio.Focus()
+            Else
+                If (IsNothing(txtTel.Text)) Then
+                    MessageBox.Show("Error, falta de informaciòn", "No se ha ingresado teléfono", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    txtTel.Focus()
+                Else
+                    If (IsNothing(txtTelEmergencia.Text)) Then
+                        MessageBox.Show("Error, falta de informaciòn", "No se ha ingresado Teléfono de emergencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        txtTelEmergencia.Focus()
+                    Else
+                        If (IsNothing(txtCiudad.Text)) Then
+                            MessageBox.Show("Error, falta de informaciòn", "No se ha ingresado ciudad", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                            txtCiudad.Focus()
+                        Else
+                            If Not cboEscuela.SelectedValue Is Nothing Then
+                                MessageBox.Show("Error, falta de informaciòn", "No se ha seleccionado escuela", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                            Else
+                                If (IsNothing(txtControlExterno.Text)) Then
+                                    MessageBox.Show("Error, falta de informaciòn", "No se ha número de control institucional", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                                    txtControlExterno.Focus()
+                                Else
+                                    If (IsNothing(txtCorreo.Text)) Then
+                                        MessageBox.Show("Error, falta de informaciòn", "No se ha número de correo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                                        txtCorreo.Focus()
+                                    Else
+                                        If Me.ptbFoto.Image Is Nothing Then
+                                            MessageBox.Show("Error, falta de informaciòn", "No se ha ingresado foto de alumno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                                        Else
+
+                                            'Sección de lógica y sentancias sql
+
+
+
+
+
+
+
+
+                                            'Limpieza de txt
+                                            txtNoControl.Text = ""
+                                            txtNombre.Text = ""
+                                            txtDomicilio.Text = ""
+                                            txtCiudad.Text = ""
+                                            txtTel.Text = ""
+                                            txtTelEmergencia.Text = ""
+                                            txtCorreo.Text = ""
+                                            txtControlExterno.Text = ""
+                                            ptbFoto.Image.Dispose()
+                                            ptbFoto.Image = Nothing
+
+
+                                        End If
+
+                                    End If
+
+                                End If
+
+                            End If
+
+                        End If
+
+                    End If
+
+                End If
+
+            End If
+
+        End If
+
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
-        Dim n As Integer
-        n = AlumnoBindingSource.Count + 1
-        AlumnoBindingSource.AddNew()
-        txtNoControl.Text = n
+        'botones
+        btnNuevo.Enabled = False
+        btnAceptar.Enabled = True
+        btnCancelar.Enabled = True
+        btnSalir.Enabled = False
+        btnBuscarF.Enabled = True
 
+        'Desbloqueo de txt
         txtNombre.Enabled = True
         txtDomicilio.Enabled = True
-        txtEstado.Enabled = True
-        txtCorreo.Enabled = True
         txtTel.Enabled = True
         txtTelEmergencia.Enabled = True
         txtCiudad.Enabled = True
-        txtUNA.Enabled = True
-        cboSituacion.Enabled = True
-        dtpFechaNa.Enabled = True
-        btnBuscarF.Enabled = True
-
-        btnPrimero.Enabled = False
-        btnSiguiente.Enabled = False
-        btnAnterior.Enabled = False
-        btnUltimo.Enabled = False
-    End Sub
-
-    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
-        txtNombre.Enabled = True
-        txtDomicilio.Enabled = True
-        txtEstado.Enabled = True
         txtCorreo.Enabled = True
-        txtTel.Enabled = True
-        txtTelEmergencia.Enabled = True
-        txtCiudad.Enabled = True
-        txtUNA.Enabled = True
-        cboSituacion.Enabled = True
-        dtpFechaNa.Enabled = True
-        btnBuscarF.Enabled = True
-        banModificar = True
+        cboEscuela.Enabled = True
+        txtControlExterno.Enabled = True
 
-        btnPrimero.Enabled = False
-        btnSiguiente.Enabled = False
-        btnAnterior.Enabled = False
-        btnUltimo.Enabled = False
-    End Sub
 
-    Private Sub btnPrimero_Click(sender As Object, e As EventArgs) Handles btnPrimero.Click
-        AlumnoBindingSource.MoveFirst()
-    End Sub
-
-    Private Sub btnAnterior_Click(sender As Object, e As EventArgs) Handles btnAnterior.Click
-        AlumnoBindingSource.MovePrevious()
-    End Sub
-
-    Private Sub btnSiguiente_Click(sender As Object, e As EventArgs) Handles btnSiguiente.Click
-        AlumnoBindingSource.MoveNext()
-    End Sub
-
-    Private Sub btnUltimo_Click(sender As Object, e As EventArgs) Handles btnUltimo.Click
-        AlumnoBindingSource.MoveLast()
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        'botones
+        btnNuevo.Enabled = True
+        btnAceptar.Enabled = False
+        btnCancelar.Enabled = False
+        btnSalir.Enabled = True
+        btnBuscarF.Enabled = False
+
+        'Bloqueo de txt
         txtNombre.Enabled = False
         txtDomicilio.Enabled = False
-        txtEstado.Enabled = False
-        txtCorreo.Enabled = False
         txtTel.Enabled = False
         txtTelEmergencia.Enabled = False
         txtCiudad.Enabled = False
-        txtUNA.Enabled = False
-        cboSituacion.Enabled = False
-        dtpFechaNa.Enabled = False
-        btnBuscarF.Enabled = False
+        txtCorreo.Enabled = False
+        cboEscuela.Enabled = False
+        txtControlExterno.Enabled = False
 
-        btnPrimero.Enabled = True
-        btnSiguiente.Enabled = True
-        btnAnterior.Enabled = True
-        btnUltimo.Enabled = True
+
     End Sub
 
     Private Sub btnBuscarF_Click(sender As Object, e As EventArgs) Handles btnBuscarF.Click
@@ -170,12 +160,49 @@ Public Class frmRegistroAlumno
         ubicacion = ruta
     End Sub
 
-    Private Sub SqlDataAdapter1_RowUpdated(sender As Object, e As SqlRowUpdatedEventArgs)
-        If e.Status = UpdateStatus.ErrorsOccurred Then
-            MessageBox.Show(e.Errors.Message & vbCrLf &
-            e.Row.Item("nombre", DataRowVersion.Original) & vbCrLf &
-            e.Row.Item("nombre", DataRowVersion.Current))
-            e.Status = UpdateStatus.SkipCurrentRow
+    Private Sub txtNombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNombre.KeyPress
+        e.KeyChar = UCase(e.KeyChar)
+        If e.KeyChar > ChrW(26) Then
+            If InStr(CadenaValida, e.KeyChar) = 0 Then
+                e.KeyChar = ChrW(0)
+            End If
         End If
     End Sub
+
+    Private Sub txtCiudad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCiudad.KeyPress
+        e.KeyChar = UCase(e.KeyChar)
+        If e.KeyChar > ChrW(26) Then
+            If InStr(CadenaValida, e.KeyChar) = 0 Then
+                e.KeyChar = ChrW(0)
+            End If
+        End If
+    End Sub
+
+    Private Sub txtDomicilio_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDomicilio.KeyPress
+        e.KeyChar = UCase(e.KeyChar)
+        If e.KeyChar > ChrW(26) Then
+            If InStr(CadenaValida, e.KeyChar) = 0 Then
+                e.KeyChar = ChrW(0)
+            End If
+        End If
+    End Sub
+
+    Private Sub txtTel_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTel.KeyPress
+        e.KeyChar = UCase(e.KeyChar)
+        If e.KeyChar > ChrW(26) Then
+            If InStr(CadenaNumero, e.KeyChar) = 0 Then
+                e.KeyChar = ChrW(0)
+            End If
+        End If
+    End Sub
+
+    Private Sub txtTelEmergencia_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTelEmergencia.KeyPress
+        e.KeyChar = UCase(e.KeyChar)
+        If e.KeyChar > ChrW(26) Then
+            If InStr(CadenaNumero, e.KeyChar) = 0 Then
+                e.KeyChar = ChrW(0)
+            End If
+        End If
+    End Sub
+
 End Class
