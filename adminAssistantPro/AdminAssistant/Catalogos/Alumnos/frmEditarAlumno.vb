@@ -1,26 +1,36 @@
-﻿Imports System.Data.SqlClient
-Public Class frmRegistroAlumno
-    Dim ubicacion As String
-    Dim contFallas As Integer
-    Dim banModificar As Boolean = False
-    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
-        'Cerrando conexion
+﻿Public Class frmEditarAlumno
+    Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
+        'Botones
+        btnNuevo.Enabled = False
+        btnAceptar.Enabled = True
+        btnCancelar.Enabled = True
+        btnBuscar.Enabled = True
+        btnBuscarF.Enabled = True
+        btnSalir.Enabled = False
 
-    End Sub
+        'Desbloqueo de txt
+        cboAlumno.Enabled = True
+        txtNombre.Enabled = True
+        txtDomicilio.Enabled = True
+        txtTel.Enabled = True
+        txtTelEmergencia.Enabled = True
+        txtCiudad.Enabled = True
+        txtCorreo.Enabled = True
+        cboEscuela.Enabled = True
+        txtControlExterno.Enabled = True
 
-    Private Sub frmRegistroAlumno_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Abriendo conexion
-        'Nota: Incorporar un try para la conexion
 
     End Sub
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
-        'botones
+        'Botones
         btnNuevo.Enabled = True
         btnAceptar.Enabled = False
         btnCancelar.Enabled = False
-        btnSalir.Enabled = True
+        btnBuscar.Enabled = False
         btnBuscarF.Enabled = False
+        btnSalir.Enabled = True
+        cboEscuela.Enabled = False
 
         'Validaciones
         If (IsNothing(txtNombre.Text)) Then
@@ -80,19 +90,6 @@ Public Class frmRegistroAlumno
                                             ptbFoto.Image = Nothing
 
 
-
-                                            'Bloqueo de txt
-                                            txtNombre.Enabled = False
-                                            txtDomicilio.Enabled = False
-                                            txtTel.Enabled = False
-                                            txtTelEmergencia.Enabled = False
-                                            txtCiudad.Enabled = False
-                                            txtCorreo.Enabled = False
-                                            cboEscuela.Enabled = False
-                                            txtControlExterno.Enabled = False
-
-
-
                                         End If
 
                                     End If
@@ -113,54 +110,16 @@ Public Class frmRegistroAlumno
 
     End Sub
 
-    Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
-        'botones
-        btnNuevo.Enabled = False
-        btnAceptar.Enabled = True
-        btnCancelar.Enabled = True
-        btnSalir.Enabled = False
-        btnBuscarF.Enabled = True
-
-        'Desbloqueo de txt
-        txtNombre.Enabled = True
-        txtDomicilio.Enabled = True
-        txtTel.Enabled = True
-        txtTelEmergencia.Enabled = True
-        txtCiudad.Enabled = True
-        txtCorreo.Enabled = True
-        cboEscuela.Enabled = True
-        txtControlExterno.Enabled = True
-
-
-    End Sub
-
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
-        'botones
+        'Botones
         btnNuevo.Enabled = True
         btnAceptar.Enabled = False
         btnCancelar.Enabled = False
-        btnSalir.Enabled = True
+        btnBuscar.Enabled = False
         btnBuscarF.Enabled = False
+        btnSalir.Enabled = True
+        cboEscuela.Enabled = True
 
-        'Bloqueo de txt
-        txtNombre.Enabled = False
-        txtDomicilio.Enabled = False
-        txtTel.Enabled = False
-        txtTelEmergencia.Enabled = False
-        txtCiudad.Enabled = False
-        txtCorreo.Enabled = False
-        cboEscuela.Enabled = False
-        txtControlExterno.Enabled = False
-
-
-    End Sub
-
-    Private Sub btnBuscarF_Click(sender As Object, e As EventArgs) Handles btnBuscarF.Click
-        OpenFileDialog1.ShowDialog()
-        Dim ruta As String
-        ruta = OpenFileDialog1.FileName
-        ptbFoto.Image = Image.FromFile(ruta)
-        ubicacion = ruta
     End Sub
 
     Private Sub txtNombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNombre.KeyPress
