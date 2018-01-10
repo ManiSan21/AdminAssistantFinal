@@ -18,6 +18,8 @@
         txtCorreo.Enabled = True
         cboEscuela.Enabled = True
         txtControlExterno.Enabled = True
+        txtBuscarAlumno.Enabled = True
+
 
 
     End Sub
@@ -88,7 +90,18 @@
                                             txtControlExterno.Text = ""
                                             ptbFoto.Image.Dispose()
                                             ptbFoto.Image = Nothing
+                                            txtBuscarAlumno.Text = ""
 
+                                            'Bloqueo de txt
+                                            txtBuscarAlumno.Enabled = False
+                                            txtNoControl.Enabled = False
+                                            txtNombre.Enabled = False
+                                            txtDomicilio.Enabled = False
+                                            txtCiudad.Enabled = False
+                                            txtTel.Enabled = False
+                                            txtTelEmergencia.Enabled = False
+                                            txtCorreo.Enabled = False
+                                            txtControlExterno.Enabled = False
 
                                         End If
 
@@ -119,6 +132,17 @@
         btnBuscarF.Enabled = False
         btnSalir.Enabled = True
         cboEscuela.Enabled = True
+
+        'Bloqueo de txt
+        txtBuscarAlumno.Enabled = False
+        txtNoControl.Enabled = False
+        txtNombre.Enabled = False
+        txtDomicilio.Enabled = False
+        txtCiudad.Enabled = False
+        txtTel.Enabled = False
+        txtTelEmergencia.Enabled = False
+        txtCorreo.Enabled = False
+        txtControlExterno.Enabled = False
 
     End Sub
 
