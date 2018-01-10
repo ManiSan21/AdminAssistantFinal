@@ -3,15 +3,23 @@ Public Class frmRegistroAlumno
     Dim ubicacion As String
     Dim contFallas As Integer
     Dim banModificar As Boolean = False
+    Dim idEscuela As Integer
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         'Cerrando conexion
-
+        Conexion.Close()
+        Me.Close()
     End Sub
 
     Private Sub frmRegistroAlumno_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Abriendo conexion
         'Nota: Incorporar un try para la conexion
-
+        Conexion.Open()
+        comandoGeneral.CommandText = "SELECT nombre FROM Escuela"
+        lectorGeneral = comandoGeneral.ExecuteReader
+        While lectorGeneral.Read
+            cboEscuela.Items.Add(lectorGeneral(0))
+        End While
+        lectorGeneral.Close()
     End Sub
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
@@ -24,97 +32,76 @@ Public Class frmRegistroAlumno
 
         'Validaciones
         If (IsNothing(txtNombre.Text)) Then
-            MessageBox.Show("Error, falta de informaciòn", "No se ha ingresado nombre", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            MessageBox.Show("Error, falta de información", "No se ha ingresado nombre", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             txtNombre.Focus()
         Else
             If (IsNothing(txtDomicilio.Text)) Then
-                MessageBox.Show("Error, falta de informaciòn", "No se ha ingresado domicilio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("Error, falta de información", "No se ha ingresado domicilio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 txtDomicilio.Focus()
             Else
                 If (IsNothing(txtTel.Text)) Then
-                    MessageBox.Show("Error, falta de informaciòn", "No se ha ingresado teléfono", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    MessageBox.Show("Error, falta de información", "No se ha ingresado teléfono", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     txtTel.Focus()
                 Else
                     If (IsNothing(txtTelEmergencia.Text)) Then
-                        MessageBox.Show("Error, falta de informaciòn", "No se ha ingresado Teléfono de emergencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        MessageBox.Show("Error, falta de información", "No se ha ingresado Teléfono de emergencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                         txtTelEmergencia.Focus()
                     Else
                         If (IsNothing(txtCiudad.Text)) Then
-                            MessageBox.Show("Error, falta de informaciòn", "No se ha ingresado ciudad", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                            MessageBox.Show("Error, falta de información", "No se ha ingresado ciudad", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                             txtCiudad.Focus()
                         Else
                             If Not cboEscuela.SelectedValue Is Nothing Then
-                                MessageBox.Show("Error, falta de informaciòn", "No se ha seleccionado escuela", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                                MessageBox.Show("Error, falta de información", "No se ha seleccionado escuela", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                             Else
-                                If (IsNothing(txtControlExterno.Text)) Then
-                                    MessageBox.Show("Error, falta de informaciòn", "No se ha número de control institucional", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                                    txtControlExterno.Focus()
+                                If (IsNothing(txtCorreo.Text)) Then
+                                    MessageBox.Show("Error, falta de información", "No se ha número de correo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                                    txtCorreo.Focus()
                                 Else
-                                    If (IsNothing(txtCorreo.Text)) Then
-                                        MessageBox.Show("Error, falta de informaciòn", "No se ha número de correo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                                        txtCorreo.Focus()
+                                    If Me.ptbFoto.Image Is Nothing Then
+                                        MessageBox.Show("Error, falta de información", "No se ha ingresado foto de alumno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                                     Else
-                                        If Me.ptbFoto.Image Is Nothing Then
-                                            MessageBox.Show("Error, falta de informaciòn", "No se ha ingresado foto de alumno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                                        Else
-
-                                            'Sección de lógica y sentancias sql
-
-
-
-
-
-
-
-
-                                            'Limpieza de txt
-                                            txtNoControl.Text = ""
-                                            txtNombre.Text = ""
-                                            txtDomicilio.Text = ""
-                                            txtCiudad.Text = ""
-                                            txtTel.Text = ""
-                                            txtTelEmergencia.Text = ""
-                                            txtCorreo.Text = ""
-                                            txtControlExterno.Text = ""
-                                            ptbFoto.Image.Dispose()
-                                            ptbFoto.Image = Nothing
+                                        'Sección de lógica y sentancias sql
+                                        comandoGeneral.CommandText = "INSERT INTO Alumno VALUES(" & CInt(txtNoControl.Text) & "," & CInt(idEscuela) & ",'" & CStr(txtNombre.Text) & "','" & CStr(txtDomicilio.Text) & "','" & CStr(txtCiudad.Text) & "','" & CStr(txtTel.Text) & "','" & CStr(txtTelEmergencia.Text) & "','" & CStr(txtCorreo.Text) & "','" & CStr(ubicacion) & "'," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & ")"
+                                        comandoGeneral.ExecuteNonQuery()
+                                        MessageBox.Show("¡Datos guardados exitosamente!", "Registro de alumnos", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                        'Limpieza de txt
+                                        txtNoControl.Text = ""
+                                        txtNombre.Text = ""
+                                        txtDomicilio.Text = ""
+                                        txtCiudad.Text = ""
+                                        txtTel.Text = ""
+                                        txtTelEmergencia.Text = ""
+                                        txtCorreo.Text = ""
+                                        ptbFoto.Image.Dispose()
+                                        ptbFoto.Image = Nothing
 
 
 
-                                            'Bloqueo de txt
-                                            txtNombre.Enabled = False
-                                            txtDomicilio.Enabled = False
-                                            txtTel.Enabled = False
-                                            txtTelEmergencia.Enabled = False
-                                            txtCiudad.Enabled = False
-                                            txtCorreo.Enabled = False
-                                            cboEscuela.Enabled = False
-                                            txtControlExterno.Enabled = False
-
-
-
-                                        End If
-
+                                        'Bloqueo de txt
+                                        txtNombre.Enabled = False
+                                        txtDomicilio.Enabled = False
+                                        txtTel.Enabled = False
+                                        txtTelEmergencia.Enabled = False
+                                        txtCiudad.Enabled = False
+                                        txtCorreo.Enabled = False
+                                        cboEscuela.Enabled = False
                                     End If
-
                                 End If
-
                             End If
-
                         End If
-
                     End If
-
                 End If
-
             End If
-
         End If
-
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         'botones
+        Dim n As Integer
+        comandoGeneral.CommandText = "SELECT COUNT(idAlumno) FROM Alumno"
+        n = comandoGeneral.ExecuteScalar + 1
+        txtNoControl.Text = CStr(n)
         btnNuevo.Enabled = False
         btnAceptar.Enabled = True
         btnCancelar.Enabled = True
@@ -129,9 +116,6 @@ Public Class frmRegistroAlumno
         txtCiudad.Enabled = True
         txtCorreo.Enabled = True
         cboEscuela.Enabled = True
-        txtControlExterno.Enabled = True
-
-
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
@@ -150,9 +134,6 @@ Public Class frmRegistroAlumno
         txtCiudad.Enabled = False
         txtCorreo.Enabled = False
         cboEscuela.Enabled = False
-        txtControlExterno.Enabled = False
-
-
     End Sub
 
     Private Sub btnBuscarF_Click(sender As Object, e As EventArgs) Handles btnBuscarF.Click
@@ -208,4 +189,11 @@ Public Class frmRegistroAlumno
         End If
     End Sub
 
+    Private Sub cboEscuela_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboEscuela.SelectedIndexChanged
+        comandoGeneral.CommandText = "SELECT idEscuela FROM Escuela WHERE nombre = '" & CStr(cboEscuela.Text) & "'"
+        lectorGeneral = comandoGeneral.ExecuteReader
+        lectorGeneral.Read()
+        idEscuela = lectorGeneral(0)
+        lectorGeneral.Close()
+    End Sub
 End Class

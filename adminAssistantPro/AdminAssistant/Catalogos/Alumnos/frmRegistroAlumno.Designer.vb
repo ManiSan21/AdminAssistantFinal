@@ -47,8 +47,6 @@ Partial Class frmRegistroAlumno
         Me.Label8 = New System.Windows.Forms.Label()
         Me.cboEscuela = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtControlExterno = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.ptbFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -341,34 +339,12 @@ Partial Class frmRegistroAlumno
         Me.Label4.TabIndex = 44
         Me.Label4.Text = "Escuela"
         '
-        'txtControlExterno
-        '
-        Me.txtControlExterno.Enabled = False
-        Me.txtControlExterno.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtControlExterno.Location = New System.Drawing.Point(659, 389)
-        Me.txtControlExterno.Multiline = True
-        Me.txtControlExterno.Name = "txtControlExterno"
-        Me.txtControlExterno.Size = New System.Drawing.Size(232, 34)
-        Me.txtControlExterno.TabIndex = 45
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(655, 359)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(229, 24)
-        Me.Label6.TabIndex = 46
-        Me.Label6.Text = "No. control institucional"
-        '
         'frmRegistroAlumno
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(958, 511)
-        Me.Controls.Add(Me.txtControlExterno)
-        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.cboEscuela)
         Me.Controls.Add(Me.txtTel)
@@ -427,6 +403,4 @@ Partial Class frmRegistroAlumno
     Friend WithEvents Label8 As Label
     Friend WithEvents cboEscuela As ComboBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents txtControlExterno As TextBox
-    Friend WithEvents Label6 As Label
 End Class
