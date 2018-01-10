@@ -42,4 +42,9 @@ Module Module1
     Public contFalla As Integer
     Public frame As String = String.Empty
     Public descripcion As String = String.Empty
+
+
+    Public CadenaValida As String = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ "
+    Public CadenaNumero As String = "0123456789-"
+
 End Module
