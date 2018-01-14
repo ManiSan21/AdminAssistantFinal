@@ -140,14 +140,14 @@ Partial Class principal
         'ActualizarCalificaciònToolStripMenuItem
         '
         Me.ActualizarCalificaciònToolStripMenuItem.Name = "ActualizarCalificaciònToolStripMenuItem"
-        Me.ActualizarCalificaciònToolStripMenuItem.Size = New System.Drawing.Size(616, 44)
-        Me.ActualizarCalificaciònToolStripMenuItem.Text = "Actualizar calificaciòn"
+        Me.ActualizarCalificaciònToolStripMenuItem.Size = New System.Drawing.Size(623, 44)
+        Me.ActualizarCalificaciònToolStripMenuItem.Text = "Actualizar calificación"
         '
         'ConsultarCalifcacionPorAlumnoToolStripMenuItem
         '
         Me.ConsultarCalifcacionPorAlumnoToolStripMenuItem.Name = "ConsultarCalifcacionPorAlumnoToolStripMenuItem"
-        Me.ConsultarCalifcacionPorAlumnoToolStripMenuItem.Size = New System.Drawing.Size(616, 44)
-        Me.ConsultarCalifcacionPorAlumnoToolStripMenuItem.Text = "Consultar califcacion por alumno"
+        Me.ConsultarCalifcacionPorAlumnoToolStripMenuItem.Size = New System.Drawing.Size(623, 44)
+        Me.ConsultarCalifcacionPorAlumnoToolStripMenuItem.Text = "Consultar calificación por alumno"
         '
         'SalirToolStripMenuItem
         '
