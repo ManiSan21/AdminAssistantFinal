@@ -71,4 +71,12 @@ Public Class principal
     Private Sub ConsultaIndividualToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultaIndividualToolStripMenuItem.Click
         frmConsultaIndividual.ShowDialog()
     End Sub
+
+    Private Sub ActualizarCalificaciònToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ActualizarCalificaciònToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub ConsultarCalifcacionPorAlumnoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarCalifcacionPorAlumnoToolStripMenuItem.Click
+        frmKardexAlumno.ShowDialog()
+    End Sub
 End Class

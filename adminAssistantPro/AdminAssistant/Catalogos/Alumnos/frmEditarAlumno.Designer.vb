@@ -43,7 +43,6 @@ Partial Class frmEditarAlumno
         Me.txtDomicilio = New System.Windows.Forms.TextBox()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.ptbFoto = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -53,6 +52,7 @@ Partial Class frmEditarAlumno
         Me.cboAlumno = New System.Windows.Forms.ComboBox()
         Me.txtBuscarAlumno = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.ptbFoto = New System.Windows.Forms.PictureBox()
         CType(Me.ptbFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -61,6 +61,7 @@ Partial Class frmEditarAlumno
         Me.txtControlExterno.Enabled = False
         Me.txtControlExterno.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtControlExterno.Location = New System.Drawing.Point(667, 518)
+        Me.txtControlExterno.MaxLength = 20
         Me.txtControlExterno.Multiline = True
         Me.txtControlExterno.Name = "txtControlExterno"
         Me.txtControlExterno.Size = New System.Drawing.Size(232, 34)
@@ -103,6 +104,7 @@ Partial Class frmEditarAlumno
         Me.txtTel.Enabled = False
         Me.txtTel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTel.Location = New System.Drawing.Point(27, 437)
+        Me.txtTel.MaxLength = 15
         Me.txtTel.Multiline = True
         Me.txtTel.Name = "txtTel"
         Me.txtTel.Size = New System.Drawing.Size(250, 34)
@@ -161,6 +163,7 @@ Partial Class frmEditarAlumno
         Me.txtCiudad.Enabled = False
         Me.txtCiudad.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCiudad.Location = New System.Drawing.Point(581, 437)
+        Me.txtCiudad.MaxLength = 45
         Me.txtCiudad.Multiline = True
         Me.txtCiudad.Name = "txtCiudad"
         Me.txtCiudad.Size = New System.Drawing.Size(318, 34)
@@ -234,6 +237,7 @@ Partial Class frmEditarAlumno
         Me.txtCorreo.Enabled = False
         Me.txtCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCorreo.Location = New System.Drawing.Point(27, 518)
+        Me.txtCorreo.MaxLength = 45
         Me.txtCorreo.Multiline = True
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.Size = New System.Drawing.Size(286, 34)
@@ -254,6 +258,7 @@ Partial Class frmEditarAlumno
         Me.txtTelEmergencia.Enabled = False
         Me.txtTelEmergencia.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTelEmergencia.Location = New System.Drawing.Point(303, 437)
+        Me.txtTelEmergencia.MaxLength = 15
         Me.txtTelEmergencia.Multiline = True
         Me.txtTelEmergencia.Name = "txtTelEmergencia"
         Me.txtTelEmergencia.Size = New System.Drawing.Size(258, 34)
@@ -274,6 +279,7 @@ Partial Class frmEditarAlumno
         Me.txtDomicilio.Enabled = False
         Me.txtDomicilio.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDomicilio.Location = New System.Drawing.Point(27, 355)
+        Me.txtDomicilio.MaxLength = 45
         Me.txtDomicilio.Multiline = True
         Me.txtDomicilio.Name = "txtDomicilio"
         Me.txtDomicilio.Size = New System.Drawing.Size(641, 34)
@@ -306,17 +312,6 @@ Partial Class frmEditarAlumno
         Me.Label7.Size = New System.Drawing.Size(96, 24)
         Me.Label7.TabIndex = 60
         Me.Label7.Text = "Domicilio"
-        '
-        'ptbFoto
-        '
-        Me.ptbFoto.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ptbFoto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.ptbFoto.Location = New System.Drawing.Point(699, 108)
-        Me.ptbFoto.Name = "ptbFoto"
-        Me.ptbFoto.Size = New System.Drawing.Size(204, 197)
-        Me.ptbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.ptbFoto.TabIndex = 58
-        Me.ptbFoto.TabStop = False
         '
         'Label3
         '
@@ -420,6 +415,17 @@ Partial Class frmEditarAlumno
         Me.Label12.Size = New System.Drawing.Size(85, 24)
         Me.Label12.TabIndex = 77
         Me.Label12.Text = "Nombre"
+        '
+        'ptbFoto
+        '
+        Me.ptbFoto.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ptbFoto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.ptbFoto.Location = New System.Drawing.Point(699, 108)
+        Me.ptbFoto.Name = "ptbFoto"
+        Me.ptbFoto.Size = New System.Drawing.Size(204, 197)
+        Me.ptbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ptbFoto.TabIndex = 58
+        Me.ptbFoto.TabStop = False
         '
         'frmEditarAlumno
         '

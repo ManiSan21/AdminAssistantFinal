@@ -137,6 +137,7 @@ Partial Class frmRegistroAlumno
         Me.txtDomicilio.Enabled = False
         Me.txtDomicilio.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDomicilio.Location = New System.Drawing.Point(21, 226)
+        Me.txtDomicilio.MaxLength = 45
         Me.txtDomicilio.Multiline = True
         Me.txtDomicilio.Name = "txtDomicilio"
         Me.txtDomicilio.Size = New System.Drawing.Size(641, 34)
@@ -157,6 +158,7 @@ Partial Class frmRegistroAlumno
         Me.txtTelEmergencia.Enabled = False
         Me.txtTelEmergencia.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTelEmergencia.Location = New System.Drawing.Point(295, 308)
+        Me.txtTelEmergencia.MaxLength = 15
         Me.txtTelEmergencia.Multiline = True
         Me.txtTelEmergencia.Name = "txtTelEmergencia"
         Me.txtTelEmergencia.Size = New System.Drawing.Size(258, 34)
@@ -167,6 +169,7 @@ Partial Class frmRegistroAlumno
         Me.txtCorreo.Enabled = False
         Me.txtCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCorreo.Location = New System.Drawing.Point(21, 389)
+        Me.txtCorreo.MaxLength = 40
         Me.txtCorreo.Multiline = True
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.Size = New System.Drawing.Size(286, 34)
@@ -240,6 +243,7 @@ Partial Class frmRegistroAlumno
         Me.txtCiudad.Enabled = False
         Me.txtCiudad.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCiudad.Location = New System.Drawing.Point(573, 308)
+        Me.txtCiudad.MaxLength = 40
         Me.txtCiudad.Multiline = True
         Me.txtCiudad.Name = "txtCiudad"
         Me.txtCiudad.Size = New System.Drawing.Size(318, 34)
@@ -302,6 +306,7 @@ Partial Class frmRegistroAlumno
         Me.txtTel.Enabled = False
         Me.txtTel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTel.Location = New System.Drawing.Point(21, 308)
+        Me.txtTel.MaxLength = 15
         Me.txtTel.Multiline = True
         Me.txtTel.Name = "txtTel"
         Me.txtTel.Size = New System.Drawing.Size(250, 34)
