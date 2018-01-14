@@ -31,79 +31,32 @@
     End Sub
 
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
-        If IsNumeric(txtNivel1.Text) Then
-            If IsNumeric(txtNivel2.Text) Then
-                If IsNumeric(txtNivel3.Text) Then
-                    If IsNumeric(txtNivel4.Text) Then
-                        If IsNumeric(txtNivel5.Text) Then
-                            If IsNumeric(txtNivel6.Text) Then
-                                If IsNumeric(txtNivel7.Text) Then
-                                    If IsNumeric(txtNivel8.Text) Then
-                                        If IsNumeric(txtNivel9.Text) Then
-                                            If IsNumeric(txtNivel10.Text) Then
-                                                If IsNumeric(txtNivel11.Text) Then
-                                                    If IsNumeric(txtNivel12.Text) Then
-                                                        'Desbloqueo de botones
-                                                        btnNuevo.Enabled = True
-                                                        btnSalir.Enabled = True
 
-                                                        btnRegistrar.Enabled = False
-                                                        btnCancelar.Enabled = False
+        'Desbloqueo de botones
+        btnNuevo.Enabled = True
+        btnSalir.Enabled = True
 
-                                                        'Desbloqueo de txt
-                                                        txtNivel1.Enabled = False
-                                                        txtNivel2.Enabled = False
-                                                        txtNivel3.Enabled = False
-                                                        txtNivel4.Enabled = False
-                                                        txtNivel5.Enabled = False
-                                                        txtNivel6.Enabled = False
-                                                        txtNivel7.Enabled = False
-                                                        txtNivel8.Enabled = False
-                                                        txtNivel9.Enabled = False
-                                                        txtNivel10.Enabled = False
-                                                        txtNivel11.Enabled = False
-                                                        txtNivel12.Enabled = False
+        btnRegistrar.Enabled = False
+        btnCancelar.Enabled = False
 
-                                                        'Desbloqueo de combo, boton y nombre para buscar
-                                                        cboNombre.Enabled = False
-                                                        txtNombre.Enabled = False
-                                                        btnBuscar.Enabled = False
-                                                    Else
-                                                        txtNivel12.Text = 0
-                                                    End If
-                                                Else
-                                                    txtNivel11.Text = 0
-                                                End If
-                                            Else
-                                                txtNivel10.Text = 0
-                                            End If
-                                        Else
-                                            txtNivel9.Text = 0
-                                        End If
-                                    Else
-                                        txtNivel8.Text = 0
-                                    End If
-                                Else
-                                    txtNivel7.Text = 0
-                                End If
-                            Else
-                                txtNivel6.Text = 0
-                            End If
-                        Else
-                            txtNivel5.Text = 0
-                        End If
-                    Else
-                        txtNivel4.Text = 0
-                    End If
-                Else
-                    txtNivel3.Text = 0
-                End If
-            Else
-                txtNivel2.Text = 0
-            End If
-        Else
-            txtNivel1.Text = 0
-        End If
+        'Desbloqueo de txt
+        txtNivel1.Enabled = False
+        txtNivel2.Enabled = False
+        txtNivel3.Enabled = False
+        txtNivel4.Enabled = False
+        txtNivel5.Enabled = False
+        txtNivel6.Enabled = False
+        txtNivel7.Enabled = False
+        txtNivel8.Enabled = False
+        txtNivel9.Enabled = False
+        txtNivel10.Enabled = False
+        txtNivel11.Enabled = False
+        txtNivel12.Enabled = False
+
+        'Desbloqueo de combo, boton y nombre para buscar
+        cboNombre.Enabled = False
+        txtNombre.Enabled = False
+        btnBuscar.Enabled = False
 
     End Sub
 
