@@ -432,6 +432,7 @@ Partial Class frmEditarAlumno
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(984, 634)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.txtBuscarAlumno)
         Me.Controls.Add(Me.cboAlumno)
@@ -464,6 +465,7 @@ Partial Class frmEditarAlumno
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
         Me.Name = "frmEditarAlumno"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Editar datos de alumno"
         CType(Me.ptbFoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

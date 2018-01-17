@@ -25,14 +25,7 @@
     End Sub
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
-        'Botones
-        btnNuevo.Enabled = True
-        btnAceptar.Enabled = False
-        btnCancelar.Enabled = False
-        btnBuscar.Enabled = False
-        btnBuscarF.Enabled = False
-        btnSalir.Enabled = True
-        cboEscuela.Enabled = False
+
 
         'Validaciones
         If (IsNothing(txtNombre.Text)) Then
@@ -103,6 +96,15 @@
                                             txtCorreo.Enabled = False
                                             txtControlExterno.Enabled = False
 
+                                            'Botones
+                                            btnNuevo.Enabled = True
+                                            btnAceptar.Enabled = False
+                                            btnCancelar.Enabled = False
+                                            btnBuscar.Enabled = False
+                                            btnBuscarF.Enabled = False
+                                            btnSalir.Enabled = True
+                                            cboEscuela.Enabled = False
+
                                         End If
 
                                     End If
@@ -130,8 +132,8 @@
         btnCancelar.Enabled = False
         btnBuscar.Enabled = False
         btnBuscarF.Enabled = False
+        cboEscuela.Enabled = False
         btnSalir.Enabled = True
-        cboEscuela.Enabled = True
 
         'Bloqueo de txt
         txtBuscarAlumno.Enabled = False
@@ -193,5 +195,9 @@
 
     Private Sub frmEditarAlumno_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+        Me.Dispose()
     End Sub
 End Class
