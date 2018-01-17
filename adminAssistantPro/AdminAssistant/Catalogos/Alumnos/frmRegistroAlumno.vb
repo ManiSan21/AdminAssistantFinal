@@ -14,6 +14,10 @@ Public Class frmRegistroAlumno
         'Abriendo conexion
         'Nota: Incorporar un try para la conexion
         Conexion.Open()
+        'comandoGeneral.CommandText = "SELECT count(idEscuela) FROM Escuela"
+        'Dim canE As Integer = comandoGeneral.ExecuteScalar
+
+        'MsgBox(canE)
         comandoGeneral.CommandText = "SELECT nombre FROM Escuela"
         lectorGeneral = comandoGeneral.ExecuteReader
         While lectorGeneral.Read
@@ -23,43 +27,37 @@ Public Class frmRegistroAlumno
     End Sub
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
-        'botones
-        btnNuevo.Enabled = True
-        btnAceptar.Enabled = False
-        btnCancelar.Enabled = False
-        btnSalir.Enabled = True
-        btnBuscarF.Enabled = False
 
         'Validaciones
         If (IsNothing(txtNombre.Text)) Then
-            MessageBox.Show("Error, falta de información", "No se ha ingresado nombre", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            MessageBox.Show("No se ha ingresado nombre", "Error, falta de información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             txtNombre.Focus()
         Else
             If (IsNothing(txtDomicilio.Text)) Then
-                MessageBox.Show("Error, falta de información", "No se ha ingresado domicilio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("No se ha ingresado domicilio", "Error, falta de información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 txtDomicilio.Focus()
             Else
                 If (IsNothing(txtTel.Text)) Then
-                    MessageBox.Show("Error, falta de información", "No se ha ingresado teléfono", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    MessageBox.Show("No se ha ingresado teléfono", "Error, falta de información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     txtTel.Focus()
                 Else
                     If (IsNothing(txtTelEmergencia.Text)) Then
-                        MessageBox.Show("Error, falta de información", "No se ha ingresado Teléfono de emergencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        MessageBox.Show("No se ha ingresado teléfono de emergencia", "Error, falta de información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                         txtTelEmergencia.Focus()
                     Else
                         If (IsNothing(txtCiudad.Text)) Then
-                            MessageBox.Show("Error, falta de información", "No se ha ingresado ciudad", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                            MessageBox.Show("No se ha ingresado ciudad", "Error, falta de información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                             txtCiudad.Focus()
                         Else
                             If Not cboEscuela.SelectedValue Is Nothing Then
-                                MessageBox.Show("Error, falta de información", "No se ha seleccionado escuela", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                                MessageBox.Show("No se ha seleccionado escuela", "Error, falta de información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                             Else
                                 If (IsNothing(txtCorreo.Text)) Then
-                                    MessageBox.Show("Error, falta de información", "No se ha número de correo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                                    MessageBox.Show("No se ha ingresado correo", "Error, falta de información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                                     txtCorreo.Focus()
                                 Else
                                     If Me.ptbFoto.Image Is Nothing Then
-                                        MessageBox.Show("Error, falta de información", "No se ha ingresado foto de alumno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                                        MessageBox.Show("No se ha ingresado foto del alumno", "Error, falta de información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                                     Else
                                         'Sección de lógica y sentancias sql
                                         comandoGeneral.CommandText = "INSERT INTO Alumno VALUES(" & CInt(txtNoControl.Text) & "," & CInt(idEscuela) & ",'" & CStr(txtNombre.Text) & "','" & CStr(txtDomicilio.Text) & "','" & CStr(txtCiudad.Text) & "','" & CStr(txtTel.Text) & "','" & CStr(txtTelEmergencia.Text) & "','" & CStr(txtCorreo.Text) & "','" & CStr(ubicacion) & "'," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & ")"
@@ -86,6 +84,13 @@ Public Class frmRegistroAlumno
                                         txtCiudad.Enabled = False
                                         txtCorreo.Enabled = False
                                         cboEscuela.Enabled = False
+
+                                        'botones
+                                        btnNuevo.Enabled = True
+                                        btnAceptar.Enabled = False
+                                        btnCancelar.Enabled = False
+                                        btnSalir.Enabled = True
+                                        btnBuscarF.Enabled = False
                                     End If
                                 End If
                             End If
@@ -134,6 +139,17 @@ Public Class frmRegistroAlumno
         txtCiudad.Enabled = False
         txtCorreo.Enabled = False
         cboEscuela.Enabled = False
+
+        'Limpieza de txt
+        txtNoControl.Text = ""
+        txtNombre.Text = ""
+        txtDomicilio.Text = ""
+        txtCiudad.Text = ""
+        txtTel.Text = ""
+        txtTelEmergencia.Text = ""
+        txtCorreo.Text = ""
+        ptbFoto.Image = Nothing
+
     End Sub
 
     Private Sub btnBuscarF_Click(sender As Object, e As EventArgs) Handles btnBuscarF.Click
@@ -165,7 +181,7 @@ Public Class frmRegistroAlumno
     Private Sub txtDomicilio_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDomicilio.KeyPress
         e.KeyChar = UCase(e.KeyChar)
         If e.KeyChar > ChrW(26) Then
-            If InStr(CadenaValida, e.KeyChar) = 0 Then
+            If InStr(cadenaDomicilio, e.KeyChar) = 0 Then
                 e.KeyChar = ChrW(0)
             End If
         End If
@@ -196,4 +212,6 @@ Public Class frmRegistroAlumno
         idEscuela = lectorGeneral(0)
         lectorGeneral.Close()
     End Sub
+
+
 End Class

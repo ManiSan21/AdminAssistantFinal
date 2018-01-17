@@ -464,7 +464,7 @@ Partial Class frmEditarAlumno
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
         Me.Name = "frmEditarAlumno"
-        Me.Text = "frmEditarAlumno"
+        Me.Text = "Editar datos de alumno"
         CType(Me.ptbFoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

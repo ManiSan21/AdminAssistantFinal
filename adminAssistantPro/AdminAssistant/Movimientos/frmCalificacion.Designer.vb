@@ -386,7 +386,6 @@ Partial Class frmCalificacion
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(291, 26)
         Me.txtNombre.TabIndex = 54
-        Me.txtNombre.Visible = False
         '
         'PictureBox1
         '

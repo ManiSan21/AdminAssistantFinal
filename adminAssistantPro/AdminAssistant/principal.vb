@@ -15,10 +15,10 @@ Public Class principal
             conexionMasterServidor.Open()
             Try
                 Dim ban As Boolean = False
-                comandoMasterServidor.CommandText = "SELECT name FROM sys.databases WHERE name = 'MasterEA'"
+                comandoMasterServidor.CommandText = "SELECT name FROM sys.databases WHERE name = 'EasyEnglish'"
                 lectorMasterServidor = comandoMasterServidor.ExecuteReader
                 lectorMasterServidor.Read()
-                If lectorMasterServidor(0) = "MasterEA" Then
+                If lectorMasterServidor(0) = "EasyEnglish" Then
                     ban = True
                 End If
                 lectorMasterServidor.Close()
@@ -37,14 +37,33 @@ Public Class principal
         End Try
     End Sub
 
-    Private Sub ConsultaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultaToolStripMenuItem.Click
+    Private Sub principal_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.KeyCode = Keys.F1 Then
+            'System.Diagnostics.Process.Start("C:\Users\Diego\Documents\GitHub\adminAssistantPro\Help.chm")
+            System.Diagnostics.Process.Start("C:\Users\Mani\Documents\GitHub\AdminAssistantProEdit\adminAssistantPro\Ayuda.chm")
+        End If
+    End Sub
+
+    Private Sub ConsultaIndividualToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultaIndividualToolStripMenuItem.Click
+        frmConsultaIndividual.ShowDialog()
+    End Sub
+
+    Private Sub ActualizarCalificaciònToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ActualizarCalificaciònToolStripMenuItem.Click
+        frmCalificacion.ShowDialog()
+    End Sub
+
+    Private Sub ConsultarCalifcacionPorAlumnoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarCalifcacionPorAlumnoToolStripMenuItem.Click
+        frmKardexAlumno.ShowDialog()
+    End Sub
+
+    Private Sub ConsultaGeneralToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultaGeneralToolStripMenuItem.Click
         Try
             conexionMasterServidor.Open()
             Try
-                comandoMasterServidor.CommandText = "SELECT name FROM sys.databases WHERE name = 'MasterEA'"
+                comandoMasterServidor.CommandText = "SELECT name FROM sys.databases WHERE name = 'EasyEnglish'"
                 lectorMasterServidor = comandoMasterServidor.ExecuteReader
                 lectorMasterServidor.Read()
-                If lectorMasterServidor(0) = "MasterEA" Then
+                If lectorMasterServidor(0) = "EasyEnglish" Then
                     lectorMasterServidor.Close()
                     conexionMasterServidor.Close()
                     frmConsultaAlumnos.Show()
@@ -61,22 +80,7 @@ Public Class principal
         End Try
     End Sub
 
-    Private Sub principal_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
-        If e.KeyCode = Keys.F1 Then
-            'System.Diagnostics.Process.Start("C:\Users\Diego\Documents\GitHub\adminAssistantPro\Help.chm")
-            System.Diagnostics.Process.Start("C:\Users\Mani\Documents\GitHub\AdminAssistantProEdit\adminAssistantPro\Ayuda.chm")
-        End If
-    End Sub
-
-    Private Sub ConsultaIndividualToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultaIndividualToolStripMenuItem.Click
-        frmConsultaIndividual.ShowDialog()
-    End Sub
-
-    Private Sub ActualizarCalificaciònToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ActualizarCalificaciònToolStripMenuItem.Click
-
-    End Sub
-
-    Private Sub ConsultarCalifcacionPorAlumnoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarCalifcacionPorAlumnoToolStripMenuItem.Click
-        frmKardexAlumno.ShowDialog()
+    Private Sub EditarAlumnoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditarAlumnoToolStripMenuItem.Click
+        frmEditarAlumno.ShowDialog()
     End Sub
 End Class

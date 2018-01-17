@@ -35,6 +35,7 @@ Partial Class principal
         Me.ConsultaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.KardexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultaIndividualToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsultaGeneralToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MovimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CalificacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ActualizarCalificaciònToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -42,6 +43,8 @@ Partial Class principal
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditarAlumnoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.msPrincipal.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -92,7 +95,7 @@ Partial Class principal
         '
         'AlumnosToolStripMenuItem2
         '
-        Me.AlumnosToolStripMenuItem2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistroToolStripMenuItem, Me.ConsultaToolStripMenuItem})
+        Me.AlumnosToolStripMenuItem2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistroToolStripMenuItem, Me.ConsultaToolStripMenuItem, Me.EditarToolStripMenuItem})
         Me.AlumnosToolStripMenuItem2.Name = "AlumnosToolStripMenuItem2"
         Me.AlumnosToolStripMenuItem2.Size = New System.Drawing.Size(225, 44)
         Me.AlumnosToolStripMenuItem2.Text = "Alumnos"
@@ -105,7 +108,7 @@ Partial Class principal
         '
         'ConsultaToolStripMenuItem
         '
-        Me.ConsultaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.KardexToolStripMenuItem, Me.ConsultaIndividualToolStripMenuItem})
+        Me.ConsultaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.KardexToolStripMenuItem, Me.ConsultaIndividualToolStripMenuItem, Me.ConsultaGeneralToolStripMenuItem})
         Me.ConsultaToolStripMenuItem.Name = "ConsultaToolStripMenuItem"
         Me.ConsultaToolStripMenuItem.Size = New System.Drawing.Size(230, 44)
         Me.ConsultaToolStripMenuItem.Text = "Consulta"
@@ -121,6 +124,12 @@ Partial Class principal
         Me.ConsultaIndividualToolStripMenuItem.Name = "ConsultaIndividualToolStripMenuItem"
         Me.ConsultaIndividualToolStripMenuItem.Size = New System.Drawing.Size(390, 44)
         Me.ConsultaIndividualToolStripMenuItem.Text = "Consulta individual"
+        '
+        'ConsultaGeneralToolStripMenuItem
+        '
+        Me.ConsultaGeneralToolStripMenuItem.Name = "ConsultaGeneralToolStripMenuItem"
+        Me.ConsultaGeneralToolStripMenuItem.Size = New System.Drawing.Size(390, 44)
+        Me.ConsultaGeneralToolStripMenuItem.Text = "Consulta general"
         '
         'MovimientosToolStripMenuItem
         '
@@ -171,19 +180,33 @@ Partial Class principal
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarAlumnoToolStripMenuItem})
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(230, 44)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'EditarAlumnoToolStripMenuItem
+        '
+        Me.EditarAlumnoToolStripMenuItem.Name = "EditarAlumnoToolStripMenuItem"
+        Me.EditarAlumnoToolStripMenuItem.Size = New System.Drawing.Size(309, 44)
+        Me.EditarAlumnoToolStripMenuItem.Text = "Editar alumno"
+        '
         'principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(1099, 627)
+        Me.ControlBox = False
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.msPrincipal)
         Me.KeyPreview = True
         Me.MainMenuStrip = Me.msPrincipal
         Me.Name = "principal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "principal"
+        Me.Text = "¡Bienvenido a Easy English!"
         Me.msPrincipal.ResumeLayout(False)
         Me.msPrincipal.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -209,4 +232,7 @@ Partial Class principal
     Friend WithEvents CalificacionesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ActualizarCalificaciònToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ConsultarCalifcacionPorAlumnoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ConsultaGeneralToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EditarAlumnoToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -13,7 +13,7 @@ Module Module1
     Public transaccionMasterServidor As SqlTransaction
 
     Public cadenaLetra As String = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
-    Public cadenaDomicilio As String = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ.- "
+
 
 
     'conexion general 
@@ -47,5 +47,6 @@ Module Module1
     Public CadenaValida As String = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ "
     Public CadenaNumero As String = "0123456789-"
     Public CadenaCalificacion As String = "0123456789."
+    Public cadenaDomicilio As String = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ.- 1234567890"
 
 End Module

@@ -130,3 +130,4 @@ C:\Users\Mani\Documents\GitHub\AdminAssistantFinal\adminAssistantPro\AdminAssist
 C:\Users\Mani\Documents\GitHub\AdminAssistantFinal\adminAssistantPro\AdminAssistant\obj\Debug\RdlCompile.compiled
 C:\Users\Diego\Documents\GitHub\AdminAssistantFinal\adminAssistantPro\AdminAssistant\obj\Debug\AdminAssistant.frmEditarAlumno.resources
 C:\Users\Diego\Documents\GitHub\AdminAssistantFinal\adminAssistantPro\AdminAssistant\obj\Debug\AdminAssistant.frmConsultaIndividual.resources
+C:\Users\Diego\Documents\GitHub\AdminAssistantFinal\adminAssistantPro\AdminAssistant\obj\Debug\AdminAssistant.frmCalificacion.resources

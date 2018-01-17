@@ -231,7 +231,7 @@ Partial Class frmRegistroAlumno
         Me.btnBuscarF.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBuscarF.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscarF.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnBuscarF.Location = New System.Drawing.Point(668, 237)
+        Me.btnBuscarF.Location = New System.Drawing.Point(687, 226)
         Me.btnBuscarF.Name = "btnBuscarF"
         Me.btnBuscarF.Size = New System.Drawing.Size(204, 34)
         Me.btnBuscarF.TabIndex = 3
@@ -377,7 +377,7 @@ Partial Class frmRegistroAlumno
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmRegistroAlumno"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmRegistroAlumno"
+        Me.Text = "Registro de alumnos"
         CType(Me.ptbFoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
