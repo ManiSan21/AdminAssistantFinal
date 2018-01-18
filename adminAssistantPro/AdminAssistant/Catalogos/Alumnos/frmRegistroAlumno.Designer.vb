@@ -47,6 +47,8 @@ Partial Class frmRegistroAlumno
         Me.Label8 = New System.Windows.Forms.Label()
         Me.cboEscuela = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtNoContrlI = New System.Windows.Forms.TextBox()
         CType(Me.ptbFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -158,7 +160,7 @@ Partial Class frmRegistroAlumno
         Me.txtTelEmergencia.Enabled = False
         Me.txtTelEmergencia.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTelEmergencia.Location = New System.Drawing.Point(295, 308)
-        Me.txtTelEmergencia.MaxLength = 15
+        Me.txtTelEmergencia.MaxLength = 13
         Me.txtTelEmergencia.Multiline = True
         Me.txtTelEmergencia.Name = "txtTelEmergencia"
         Me.txtTelEmergencia.Size = New System.Drawing.Size(258, 34)
@@ -306,7 +308,7 @@ Partial Class frmRegistroAlumno
         Me.txtTel.Enabled = False
         Me.txtTel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTel.Location = New System.Drawing.Point(21, 308)
-        Me.txtTel.MaxLength = 15
+        Me.txtTel.MaxLength = 13
         Me.txtTel.Multiline = True
         Me.txtTel.Name = "txtTel"
         Me.txtTel.Size = New System.Drawing.Size(250, 34)
@@ -344,12 +346,35 @@ Partial Class frmRegistroAlumno
         Me.Label4.TabIndex = 44
         Me.Label4.Text = "Escuela"
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(684, 362)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(249, 24)
+        Me.Label6.TabIndex = 46
+        Me.Label6.Text = "Núm. Control institucional"
+        '
+        'txtNoContrlI
+        '
+        Me.txtNoContrlI.Enabled = False
+        Me.txtNoContrlI.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNoContrlI.Location = New System.Drawing.Point(688, 389)
+        Me.txtNoContrlI.MaxLength = 45
+        Me.txtNoContrlI.Multiline = True
+        Me.txtNoContrlI.Name = "txtNoContrlI"
+        Me.txtNoContrlI.Size = New System.Drawing.Size(245, 34)
+        Me.txtNoContrlI.TabIndex = 45
+        '
         'frmRegistroAlumno
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(958, 511)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.txtNoContrlI)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.cboEscuela)
         Me.Controls.Add(Me.txtTel)
@@ -408,4 +433,6 @@ Partial Class frmRegistroAlumno
     Friend WithEvents Label8 As Label
     Friend WithEvents cboEscuela As ComboBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents txtNoContrlI As TextBox
 End Class

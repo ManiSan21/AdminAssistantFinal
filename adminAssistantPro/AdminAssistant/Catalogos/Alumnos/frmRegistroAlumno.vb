@@ -11,19 +11,38 @@ Public Class frmRegistroAlumno
     End Sub
 
     Private Sub frmRegistroAlumno_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Abriendo conexion
-        'Nota: Incorporar un try para la conexion
-        Conexion.Open()
-        'comandoGeneral.CommandText = "SELECT count(idEscuela) FROM Escuela"
-        'Dim canE As Integer = comandoGeneral.ExecuteScalar
+        Try
+            Conexion.Open()
 
-        'MsgBox(canE)
-        comandoGeneral.CommandText = "SELECT nombre FROM Escuela"
-        lectorGeneral = comandoGeneral.ExecuteReader
-        While lectorGeneral.Read
-            cboEscuela.Items.Add(lectorGeneral(0))
-        End While
-        lectorGeneral.Close()
+            comandoGeneral.CommandText = "SELECT count(nombre) FROM Escuela"
+            Dim cant = comandoGeneral.ExecuteScalar
+
+            If cant > 0 Then
+
+                comandoGeneral.CommandText = "SELECT count(nombre) FROM Alumno"
+                Dim cantAlumno = comandoGeneral.ExecuteScalar
+
+                If cantAlumno > 0 Then
+
+                    comandoGeneral.CommandText = "SELECT nombre FROM Escuela"
+                    lectorGeneral = comandoGeneral.ExecuteReader
+                    While lectorGeneral.Read
+                        cboEscuela.Items.Add(lectorGeneral(0))
+                    End While
+                    lectorGeneral.Close()
+
+                Else
+                    Conexion.Close()
+                    MessageBox.Show("NO HAY ALUMNOS REGISTRADOS", "FAVOR DE VERIFICAR INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
+            Else
+                Conexion.Close()
+                MessageBox.Show("NO SE HAN REGISTRADO ESCUELAS", "FAVOR DE REGISTRAR ESCUELAS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Catch ex As Exception
+            Conexion.Close()
+            MessageBox.Show("PROBLEMAS DE CONEXIÒN", "NO SE PUDO ACCEDER A LA BASE DE DATOS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
@@ -59,38 +78,43 @@ Public Class frmRegistroAlumno
                                     If Me.ptbFoto.Image Is Nothing Then
                                         MessageBox.Show("No se ha ingresado foto del alumno", "Error, falta de información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                                     Else
-                                        'Sección de lógica y sentancias sql
-                                        comandoGeneral.CommandText = "INSERT INTO Alumno VALUES(" & CInt(txtNoControl.Text) & "," & CInt(idEscuela) & ",'" & CStr(txtNombre.Text) & "','" & CStr(txtDomicilio.Text) & "','" & CStr(txtCiudad.Text) & "','" & CStr(txtTel.Text) & "','" & CStr(txtTelEmergencia.Text) & "','" & CStr(txtCorreo.Text) & "','" & CStr(ubicacion) & "'," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & ")"
-                                        comandoGeneral.ExecuteNonQuery()
-                                        MessageBox.Show("¡Datos guardados exitosamente!", "Registro de alumnos", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                                        'Limpieza de txt
-                                        txtNoControl.Text = ""
-                                        txtNombre.Text = ""
-                                        txtDomicilio.Text = ""
-                                        txtCiudad.Text = ""
-                                        txtTel.Text = ""
-                                        txtTelEmergencia.Text = ""
-                                        txtCorreo.Text = ""
-                                        ptbFoto.Image.Dispose()
-                                        ptbFoto.Image = Nothing
+                                        If IsNothing(txtNoContrlI.Text) Then
+                                            MessageBox.Show("No se ha ingresado número de control institucional", "Error, falta de información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                                            txtCorreo.Focus()
+                                        Else
+                                            'Sección de lógica y sentancias sql
+                                            comandoGeneral.CommandText = "INSERT INTO Alumno VALUES(" & CInt(txtNoControl.Text) & "," & CInt(idEscuela) & ",'" & CStr(txtNombre.Text) & "','" & CStr(txtDomicilio.Text) & "','" & CStr(txtCiudad.Text) & "','" & CStr(txtTel.Text) & "','" & CStr(txtTelEmergencia.Text) & "','" & CStr(txtCorreo.Text) & "','" & CStr(ubicacion) & "'," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & ", '" & txtNoContrlI.Text & "')"
+                                            comandoGeneral.ExecuteNonQuery()
+                                            MessageBox.Show("¡Datos guardados exitosamente!", "Registro de alumnos", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                            'Limpieza de txt
+                                            txtNoControl.Text = ""
+                                            txtNombre.Text = ""
+                                            txtDomicilio.Text = ""
+                                            txtCiudad.Text = ""
+                                            txtTel.Text = ""
+                                            txtTelEmergencia.Text = ""
+                                            txtCorreo.Text = ""
+                                            ptbFoto.Image.Dispose()
+                                            ptbFoto.Image = Nothing
 
 
 
-                                        'Bloqueo de txt
-                                        txtNombre.Enabled = False
-                                        txtDomicilio.Enabled = False
-                                        txtTel.Enabled = False
-                                        txtTelEmergencia.Enabled = False
-                                        txtCiudad.Enabled = False
-                                        txtCorreo.Enabled = False
-                                        cboEscuela.Enabled = False
+                                            'Bloqueo de txt
+                                            txtNombre.Enabled = False
+                                            txtDomicilio.Enabled = False
+                                            txtTel.Enabled = False
+                                            txtTelEmergencia.Enabled = False
+                                            txtCiudad.Enabled = False
+                                            txtCorreo.Enabled = False
+                                            cboEscuela.Enabled = False
 
-                                        'botones
-                                        btnNuevo.Enabled = True
-                                        btnAceptar.Enabled = False
-                                        btnCancelar.Enabled = False
-                                        btnSalir.Enabled = True
-                                        btnBuscarF.Enabled = False
+                                            'botones
+                                            btnNuevo.Enabled = True
+                                            btnAceptar.Enabled = False
+                                            btnCancelar.Enabled = False
+                                            btnSalir.Enabled = True
+                                            btnBuscarF.Enabled = False
+                                        End If
                                     End If
                                 End If
                             End If

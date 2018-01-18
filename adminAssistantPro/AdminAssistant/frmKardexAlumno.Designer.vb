@@ -47,7 +47,7 @@ Partial Class frmKardexAlumno
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.txtNombreId = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.lblNombreID = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.cboNombre = New System.Windows.Forms.ComboBox()
@@ -284,15 +284,13 @@ Partial Class frmKardexAlumno
         Me.Button2.Text = "Button2"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'txtNombreId
+        'txtNombre
         '
-        Me.txtNombreId.Enabled = False
-        Me.txtNombreId.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombreId.Location = New System.Drawing.Point(270, 77)
-        Me.txtNombreId.Name = "txtNombreId"
-        Me.txtNombreId.Size = New System.Drawing.Size(291, 26)
-        Me.txtNombreId.TabIndex = 41
-        Me.txtNombreId.Visible = False
+        Me.txtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombre.Location = New System.Drawing.Point(270, 77)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(291, 26)
+        Me.txtNombre.TabIndex = 41
         '
         'lblNombreID
         '
@@ -394,6 +392,7 @@ Partial Class frmKardexAlumno
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(780, 429)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.Label13)
@@ -401,10 +400,11 @@ Partial Class frmKardexAlumno
         Me.Controls.Add(Me.cboNombre)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.lblNombreID)
-        Me.Controls.Add(Me.txtNombreId)
+        Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.Button2)
         Me.Name = "frmKardexAlumno"
-        Me.Text = "frmKardexAlumno"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Consulta de calificaciones"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -437,7 +437,7 @@ Partial Class frmKardexAlumno
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Button2 As Button
-    Friend WithEvents txtNombreId As TextBox
+    Friend WithEvents txtNombre As TextBox
     Friend WithEvents lblNombreID As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents cboNombre As ComboBox

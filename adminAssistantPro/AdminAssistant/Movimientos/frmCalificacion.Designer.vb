@@ -78,7 +78,7 @@ Partial Class frmCalificacion
         Me.btnBuscar.Enabled = False
         Me.btnBuscar.Location = New System.Drawing.Point(612, 95)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(75, 22)
+        Me.btnBuscar.Size = New System.Drawing.Size(75, 28)
         Me.btnBuscar.TabIndex = 60
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = True
@@ -97,6 +97,7 @@ Partial Class frmCalificacion
         '
         Me.cboNombre.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.cboNombre.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cboNombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboNombre.Enabled = False
         Me.cboNombre.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cboNombre.FormattingEnabled = True
@@ -390,7 +391,7 @@ Partial Class frmCalificacion
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.AdminAssistant.My.Resources.Resources.evaluation
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 32)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 18)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(159, 161)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -409,7 +410,7 @@ Partial Class frmCalificacion
         'btnCancelar
         '
         Me.btnCancelar.Enabled = False
-        Me.btnCancelar.Location = New System.Drawing.Point(431, 365)
+        Me.btnCancelar.Location = New System.Drawing.Point(411, 365)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(154, 39)
         Me.btnCancelar.TabIndex = 62
@@ -418,9 +419,9 @@ Partial Class frmCalificacion
         '
         'btnSalir
         '
-        Me.btnSalir.Location = New System.Drawing.Point(602, 365)
+        Me.btnSalir.Location = New System.Drawing.Point(596, 365)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(154, 39)
+        Me.btnSalir.Size = New System.Drawing.Size(160, 39)
         Me.btnSalir.TabIndex = 63
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
@@ -428,7 +429,7 @@ Partial Class frmCalificacion
         'btnRegistrar
         '
         Me.btnRegistrar.Enabled = False
-        Me.btnRegistrar.Location = New System.Drawing.Point(198, 365)
+        Me.btnRegistrar.Location = New System.Drawing.Point(215, 365)
         Me.btnRegistrar.Name = "btnRegistrar"
         Me.btnRegistrar.Size = New System.Drawing.Size(154, 39)
         Me.btnRegistrar.TabIndex = 64

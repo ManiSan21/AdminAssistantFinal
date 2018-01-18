@@ -70,10 +70,7 @@
 
 
 
-
-
                                             'Limpieza de txt
-                                            txtNoControl.Text = ""
                                             txtNombre.Text = ""
                                             txtDomicilio.Text = ""
                                             txtCiudad.Text = ""
@@ -87,7 +84,6 @@
 
                                             'Bloqueo de txt
                                             txtBuscarAlumno.Enabled = False
-                                            txtNoControl.Enabled = False
                                             txtNombre.Enabled = False
                                             txtDomicilio.Enabled = False
                                             txtCiudad.Enabled = False
@@ -104,6 +100,7 @@
                                             btnBuscarF.Enabled = False
                                             btnSalir.Enabled = True
                                             cboEscuela.Enabled = False
+                                            cboAlumno.Enabled = False
 
                                         End If
 
@@ -134,10 +131,10 @@
         btnBuscarF.Enabled = False
         cboEscuela.Enabled = False
         btnSalir.Enabled = True
+        cboAlumno.Enabled = False
 
         'Bloqueo de txt
         txtBuscarAlumno.Enabled = False
-        txtNoControl.Enabled = False
         txtNombre.Enabled = False
         txtDomicilio.Enabled = False
         txtCiudad.Enabled = False
@@ -145,6 +142,17 @@
         txtTelEmergencia.Enabled = False
         txtCorreo.Enabled = False
         txtControlExterno.Enabled = False
+
+        'Limpieza de txt
+        txtNombre.Text = ""
+        txtDomicilio.Text = ""
+        txtCiudad.Text = ""
+        txtTel.Text = ""
+        txtTelEmergencia.Text = ""
+        txtCorreo.Text = ""
+        txtControlExterno.Text = ""
+        ptbFoto.Image = Nothing
+        txtBuscarAlumno.Text = ""
 
     End Sub
 
@@ -194,10 +202,76 @@
     End Sub
 
     Private Sub frmEditarAlumno_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
+            Conexion.Open()
 
+            comandoGeneral.CommandText = "SELECT count(nombre) FROM Escuela"
+            Dim cant = comandoGeneral.ExecuteScalar
+
+            If cant > 0 Then
+
+                comandoGeneral.CommandText = "SELECT count(nombre) FROM Alumno"
+                Dim cantAlumno = comandoGeneral.ExecuteScalar
+
+                If cantAlumno > 0 Then
+
+                    comandoGeneral.CommandText = "SELECT nombre FROM Escuela"
+                    lectorGeneral = comandoGeneral.ExecuteReader
+                    While lectorGeneral.Read
+                        cboEscuela.Items.Add(lectorGeneral(0))
+                    End While
+                    lectorGeneral.Close()
+
+                Else
+                    Conexion.Close()
+                    MessageBox.Show("NO HAY ALUMNOS REGISTRADOS", "FAVOR DE VERIFICAR INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
+            Else
+                Conexion.Close()
+                MessageBox.Show("NO SE HAN REGISTRADO ESCUELAS", "FAVOR DE REGISTRAR ESCUELAS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Catch ex As Exception
+            Conexion.Close()
+            MessageBox.Show("PROBLEMAS DE CONEXIÒN", "NO SE PUDO ACCEDER A LA BASE DE DATOS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+        Conexion.Close()
         Me.Dispose()
+    End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        cboAlumno.Items.Clear()
+        comandoGeneral.CommandText = "SELECT nombre FROM Alumno WHERE nombre LIKE '%" & txtBuscarAlumno.Text & "%'"
+        lectorGeneral = comandoGeneral.ExecuteReader
+        While lectorGeneral.Read
+            cboAlumno.Items.Add(lectorGeneral(0))
+        End While
+        lectorGeneral.Close()
+    End Sub
+
+    Private Sub txtBuscarAlumno_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtBuscarAlumno.KeyPress
+        e.KeyChar = UCase(e.KeyChar)
+        If e.KeyChar > ChrW(26) Then
+            If InStr(CadenaValida, e.KeyChar) = 0 Then
+                e.KeyChar = ChrW(0)
+            End If
+        End If
+    End Sub
+
+    Private Sub cboAlumno_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboAlumno.SelectedIndexChanged
+        comandoGeneral.CommandText = "SELECT nombre, domicilio, ciudad, telefono, telefonoEmergencia, correo, noControl, foto FROM Alumno WHERE nombre = '" & cboAlumno.Text & "'"
+        lectorGeneral = comandoGeneral.ExecuteReader
+        While lectorGeneral.Read
+            txtNombre.Text = lectorGeneral(0)
+            txtDomicilio.Text = lectorGeneral(1)
+            txtCiudad.Text = lectorGeneral(2)
+            txtTel.Text = lectorGeneral(3)
+            txtTelEmergencia.Text = lectorGeneral(4)
+            txtCorreo.Text = lectorGeneral(5)
+            txtControlExterno.Text = lectorGeneral(6)
+        End While
+        lectorGeneral.Close()
     End Sub
 End Class

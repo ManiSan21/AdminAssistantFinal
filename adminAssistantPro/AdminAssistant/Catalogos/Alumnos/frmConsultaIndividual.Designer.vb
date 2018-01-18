@@ -33,8 +33,6 @@ Partial Class frmConsultaIndividual
         Me.txtTel = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnAceptar = New System.Windows.Forms.Button()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.txtNoControl = New System.Windows.Forms.TextBox()
         Me.txtCiudad = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtCorreo = New System.Windows.Forms.TextBox()
@@ -111,9 +109,8 @@ Partial Class frmConsultaIndividual
         '
         'txtControlExterno
         '
-        Me.txtControlExterno.Enabled = False
-        Me.txtControlExterno.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtControlExterno.Location = New System.Drawing.Point(659, 454)
+        Me.txtControlExterno.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.txtControlExterno.Location = New System.Drawing.Point(639, 377)
         Me.txtControlExterno.Multiline = True
         Me.txtControlExterno.Name = "txtControlExterno"
         Me.txtControlExterno.ReadOnly = True
@@ -124,7 +121,7 @@ Partial Class frmConsultaIndividual
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(662, 424)
+        Me.Label6.Location = New System.Drawing.Point(642, 347)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(229, 24)
         Me.Label6.TabIndex = 103
@@ -134,7 +131,7 @@ Partial Class frmConsultaIndividual
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(26, 427)
+        Me.Label4.Location = New System.Drawing.Point(26, 423)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(85, 24)
         Me.Label4.TabIndex = 101
@@ -143,9 +140,8 @@ Partial Class frmConsultaIndividual
         'txtTel
         '
         Me.txtTel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtTel.Enabled = False
-        Me.txtTel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTel.Location = New System.Drawing.Point(688, 304)
+        Me.txtTel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.txtTel.Location = New System.Drawing.Point(673, 225)
         Me.txtTel.Multiline = True
         Me.txtTel.Name = "txtTel"
         Me.txtTel.ReadOnly = True
@@ -157,7 +153,7 @@ Partial Class frmConsultaIndividual
         Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(588, 309)
+        Me.Label8.Location = New System.Drawing.Point(563, 230)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(93, 24)
         Me.Label8.TabIndex = 100
@@ -180,31 +176,9 @@ Partial Class frmConsultaIndividual
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = False
         '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(548, 225)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(133, 24)
-        Me.Label14.TabIndex = 99
-        Me.Label14.Text = "Núm. Control"
-        '
-        'txtNoControl
-        '
-        Me.txtNoControl.Enabled = False
-        Me.txtNoControl.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNoControl.Location = New System.Drawing.Point(688, 220)
-        Me.txtNoControl.Multiline = True
-        Me.txtNoControl.Name = "txtNoControl"
-        Me.txtNoControl.ReadOnly = True
-        Me.txtNoControl.Size = New System.Drawing.Size(203, 34)
-        Me.txtNoControl.TabIndex = 98
-        '
         'txtCiudad
         '
-        Me.txtCiudad.Enabled = False
-        Me.txtCiudad.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCiudad.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.txtCiudad.Location = New System.Drawing.Point(287, 377)
         Me.txtCiudad.Multiline = True
         Me.txtCiudad.Name = "txtCiudad"
@@ -224,20 +198,19 @@ Partial Class frmConsultaIndividual
         '
         'txtCorreo
         '
-        Me.txtCorreo.Enabled = False
-        Me.txtCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCorreo.Location = New System.Drawing.Point(623, 377)
+        Me.txtCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.txtCorreo.Location = New System.Drawing.Point(563, 298)
         Me.txtCorreo.Multiline = True
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.ReadOnly = True
-        Me.txtCorreo.Size = New System.Drawing.Size(268, 34)
+        Me.txtCorreo.Size = New System.Drawing.Size(313, 34)
         Me.txtCorreo.TabIndex = 87
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(623, 350)
+        Me.Label10.Location = New System.Drawing.Point(563, 271)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(74, 24)
         Me.Label10.TabIndex = 96
@@ -245,8 +218,7 @@ Partial Class frmConsultaIndividual
         '
         'txtTelEmergencia
         '
-        Me.txtTelEmergencia.Enabled = False
-        Me.txtTelEmergencia.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelEmergencia.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.txtTelEmergencia.Location = New System.Drawing.Point(26, 377)
         Me.txtTelEmergencia.Multiline = True
         Me.txtTelEmergencia.Name = "txtTelEmergencia"
@@ -266,9 +238,8 @@ Partial Class frmConsultaIndividual
         '
         'txtDomicilio
         '
-        Me.txtDomicilio.Enabled = False
-        Me.txtDomicilio.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDomicilio.Location = New System.Drawing.Point(26, 304)
+        Me.txtDomicilio.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.txtDomicilio.Location = New System.Drawing.Point(26, 298)
         Me.txtDomicilio.Multiline = True
         Me.txtDomicilio.Name = "txtDomicilio"
         Me.txtDomicilio.ReadOnly = True
@@ -308,9 +279,8 @@ Partial Class frmConsultaIndividual
         '
         'txtNombre
         '
-        Me.txtNombre.Enabled = False
-        Me.txtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombre.Location = New System.Drawing.Point(26, 220)
+        Me.txtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombre.Location = New System.Drawing.Point(26, 225)
         Me.txtNombre.MaxLength = 40
         Me.txtNombre.Multiline = True
         Me.txtNombre.Name = "txtNombre"
@@ -342,9 +312,8 @@ Partial Class frmConsultaIndividual
         '
         'txtEscuela
         '
-        Me.txtEscuela.Enabled = False
-        Me.txtEscuela.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEscuela.Location = New System.Drawing.Point(26, 454)
+        Me.txtEscuela.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.txtEscuela.Location = New System.Drawing.Point(26, 450)
         Me.txtEscuela.Multiline = True
         Me.txtEscuela.Name = "txtEscuela"
         Me.txtEscuela.ReadOnly = True
@@ -369,8 +338,6 @@ Partial Class frmConsultaIndividual
         Me.Controls.Add(Me.txtTel)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.btnAceptar)
-        Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.txtNoControl)
         Me.Controls.Add(Me.txtCiudad)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtCorreo)
@@ -404,8 +371,6 @@ Partial Class frmConsultaIndividual
     Friend WithEvents txtTel As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents btnAceptar As Button
-    Friend WithEvents Label14 As Label
-    Friend WithEvents txtNoControl As TextBox
     Friend WithEvents txtCiudad As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents txtCorreo As TextBox

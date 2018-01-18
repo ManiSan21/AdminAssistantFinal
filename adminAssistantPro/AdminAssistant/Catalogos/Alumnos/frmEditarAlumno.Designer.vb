@@ -29,8 +29,6 @@ Partial Class frmEditarAlumno
         Me.txtTel = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnNuevo = New System.Windows.Forms.Button()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.txtNoControl = New System.Windows.Forms.TextBox()
         Me.txtCiudad = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnBuscarF = New System.Windows.Forms.Button()
@@ -60,7 +58,7 @@ Partial Class frmEditarAlumno
         '
         Me.txtControlExterno.Enabled = False
         Me.txtControlExterno.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtControlExterno.Location = New System.Drawing.Point(667, 518)
+        Me.txtControlExterno.Location = New System.Drawing.Point(667, 484)
         Me.txtControlExterno.MaxLength = 20
         Me.txtControlExterno.Multiline = True
         Me.txtControlExterno.Name = "txtControlExterno"
@@ -71,7 +69,7 @@ Partial Class frmEditarAlumno
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(670, 488)
+        Me.Label6.Location = New System.Drawing.Point(670, 454)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(229, 24)
         Me.Label6.TabIndex = 72
@@ -81,7 +79,7 @@ Partial Class frmEditarAlumno
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(341, 499)
+        Me.Label4.Location = New System.Drawing.Point(341, 465)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(85, 24)
         Me.Label4.TabIndex = 70
@@ -93,7 +91,7 @@ Partial Class frmEditarAlumno
         Me.cboEscuela.Enabled = False
         Me.cboEscuela.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboEscuela.FormattingEnabled = True
-        Me.cboEscuela.Location = New System.Drawing.Point(341, 523)
+        Me.cboEscuela.Location = New System.Drawing.Point(341, 489)
         Me.cboEscuela.Name = "cboEscuela"
         Me.cboEscuela.Size = New System.Drawing.Size(316, 26)
         Me.cboEscuela.TabIndex = 57
@@ -103,7 +101,7 @@ Partial Class frmEditarAlumno
         Me.txtTel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtTel.Enabled = False
         Me.txtTel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTel.Location = New System.Drawing.Point(27, 437)
+        Me.txtTel.Location = New System.Drawing.Point(27, 404)
         Me.txtTel.MaxLength = 15
         Me.txtTel.Multiline = True
         Me.txtTel.Name = "txtTel"
@@ -115,7 +113,7 @@ Partial Class frmEditarAlumno
         Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(27, 410)
+        Me.Label8.Location = New System.Drawing.Point(27, 377)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(93, 24)
         Me.Label8.TabIndex = 69
@@ -131,38 +129,18 @@ Partial Class frmEditarAlumno
         Me.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNuevo.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnNuevo.Location = New System.Drawing.Point(27, 576)
+        Me.btnNuevo.Location = New System.Drawing.Point(27, 535)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(171, 50)
         Me.btnNuevo.TabIndex = 59
         Me.btnNuevo.Text = "Nuevo"
         Me.btnNuevo.UseVisualStyleBackColor = False
         '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(27, 292)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(133, 24)
-        Me.Label14.TabIndex = 68
-        Me.Label14.Text = "Núm. Control"
-        '
-        'txtNoControl
-        '
-        Me.txtNoControl.Enabled = False
-        Me.txtNoControl.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNoControl.Location = New System.Drawing.Point(167, 287)
-        Me.txtNoControl.Multiline = True
-        Me.txtNoControl.Name = "txtNoControl"
-        Me.txtNoControl.Size = New System.Drawing.Size(203, 34)
-        Me.txtNoControl.TabIndex = 67
-        '
         'txtCiudad
         '
         Me.txtCiudad.Enabled = False
         Me.txtCiudad.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCiudad.Location = New System.Drawing.Point(581, 437)
+        Me.txtCiudad.Location = New System.Drawing.Point(581, 404)
         Me.txtCiudad.MaxLength = 45
         Me.txtCiudad.Multiline = True
         Me.txtCiudad.Name = "txtCiudad"
@@ -173,7 +151,7 @@ Partial Class frmEditarAlumno
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(581, 410)
+        Me.Label5.Location = New System.Drawing.Point(581, 377)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(76, 24)
         Me.Label5.TabIndex = 66
@@ -190,7 +168,7 @@ Partial Class frmEditarAlumno
         Me.btnBuscarF.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBuscarF.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscarF.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnBuscarF.Location = New System.Drawing.Point(699, 305)
+        Me.btnBuscarF.Location = New System.Drawing.Point(699, 320)
         Me.btnBuscarF.Name = "btnBuscarF"
         Me.btnBuscarF.Size = New System.Drawing.Size(204, 34)
         Me.btnBuscarF.TabIndex = 50
@@ -207,7 +185,7 @@ Partial Class frmEditarAlumno
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSalir.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnSalir.Location = New System.Drawing.Point(728, 576)
+        Me.btnSalir.Location = New System.Drawing.Point(728, 535)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(171, 50)
         Me.btnSalir.TabIndex = 63
@@ -225,7 +203,7 @@ Partial Class frmEditarAlumno
         Me.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnAceptar.Location = New System.Drawing.Point(261, 576)
+        Me.btnAceptar.Location = New System.Drawing.Point(261, 535)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(171, 50)
         Me.btnAceptar.TabIndex = 61
@@ -236,7 +214,7 @@ Partial Class frmEditarAlumno
         '
         Me.txtCorreo.Enabled = False
         Me.txtCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCorreo.Location = New System.Drawing.Point(27, 518)
+        Me.txtCorreo.Location = New System.Drawing.Point(27, 484)
         Me.txtCorreo.MaxLength = 45
         Me.txtCorreo.Multiline = True
         Me.txtCorreo.Name = "txtCorreo"
@@ -247,7 +225,7 @@ Partial Class frmEditarAlumno
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(27, 491)
+        Me.Label10.Location = New System.Drawing.Point(27, 457)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(74, 24)
         Me.Label10.TabIndex = 65
@@ -257,7 +235,7 @@ Partial Class frmEditarAlumno
         '
         Me.txtTelEmergencia.Enabled = False
         Me.txtTelEmergencia.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTelEmergencia.Location = New System.Drawing.Point(303, 437)
+        Me.txtTelEmergencia.Location = New System.Drawing.Point(303, 404)
         Me.txtTelEmergencia.MaxLength = 15
         Me.txtTelEmergencia.Multiline = True
         Me.txtTelEmergencia.Name = "txtTelEmergencia"
@@ -268,7 +246,7 @@ Partial Class frmEditarAlumno
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(303, 410)
+        Me.Label9.Location = New System.Drawing.Point(303, 377)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(240, 24)
         Me.Label9.TabIndex = 64
@@ -278,7 +256,7 @@ Partial Class frmEditarAlumno
         '
         Me.txtDomicilio.Enabled = False
         Me.txtDomicilio.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDomicilio.Location = New System.Drawing.Point(27, 355)
+        Me.txtDomicilio.Location = New System.Drawing.Point(27, 320)
         Me.txtDomicilio.MaxLength = 45
         Me.txtDomicilio.Multiline = True
         Me.txtDomicilio.Name = "txtDomicilio"
@@ -296,7 +274,7 @@ Partial Class frmEditarAlumno
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnCancelar.Location = New System.Drawing.Point(501, 576)
+        Me.btnCancelar.Location = New System.Drawing.Point(501, 535)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(171, 50)
         Me.btnCancelar.TabIndex = 62
@@ -307,7 +285,7 @@ Partial Class frmEditarAlumno
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(27, 328)
+        Me.Label7.Location = New System.Drawing.Point(27, 293)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(96, 24)
         Me.Label7.TabIndex = 60
@@ -431,7 +409,7 @@ Partial Class frmEditarAlumno
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(984, 634)
+        Me.ClientSize = New System.Drawing.Size(984, 600)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.txtBuscarAlumno)
@@ -445,8 +423,6 @@ Partial Class frmEditarAlumno
         Me.Controls.Add(Me.txtTel)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.btnNuevo)
-        Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.txtNoControl)
         Me.Controls.Add(Me.txtCiudad)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btnBuscarF)
@@ -480,8 +456,6 @@ Partial Class frmEditarAlumno
     Friend WithEvents txtTel As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents btnNuevo As Button
-    Friend WithEvents Label14 As Label
-    Friend WithEvents txtNoControl As TextBox
     Friend WithEvents txtCiudad As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents btnBuscarF As Button
