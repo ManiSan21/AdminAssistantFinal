@@ -46,7 +46,7 @@ Partial Class frmKardexAlumno
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnAceptar = New System.Windows.Forms.Button()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.lblNombreID = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -55,6 +55,8 @@ Partial Class frmKardexAlumno
         Me.Label13 = New System.Windows.Forms.Label()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.txtPromedio = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -275,14 +277,14 @@ Partial Class frmKardexAlumno
         Me.Label12.TabIndex = 39
         Me.Label12.Text = "Nivel 12"
         '
-        'Button2
+        'btnAceptar
         '
-        Me.Button2.Location = New System.Drawing.Point(16, 379)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(744, 39)
-        Me.Button2.TabIndex = 40
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnAceptar.Location = New System.Drawing.Point(12, 349)
+        Me.btnAceptar.Name = "btnAceptar"
+        Me.btnAceptar.Size = New System.Drawing.Size(744, 39)
+        Me.btnAceptar.TabIndex = 40
+        Me.btnAceptar.Text = "Aceptar"
+        Me.btnAceptar.UseVisualStyleBackColor = True
         '
         'txtNombre
         '
@@ -301,10 +303,11 @@ Partial Class frmKardexAlumno
         Me.lblNombreID.Size = New System.Drawing.Size(87, 16)
         Me.lblNombreID.TabIndex = 42
         Me.lblNombreID.Text = "Ing. nombre"
-        Me.lblNombreID.Visible = False
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.txtPromedio)
+        Me.GroupBox1.Controls.Add(Me.Label15)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtNivel1)
         Me.GroupBox1.Controls.Add(Me.txtNivel3)
@@ -329,7 +332,7 @@ Partial Class frmKardexAlumno
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Location = New System.Drawing.Point(16, 202)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 183)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(744, 160)
         Me.GroupBox1.TabIndex = 45
@@ -385,13 +388,31 @@ Partial Class frmKardexAlumno
         Me.Label14.Size = New System.Drawing.Size(85, 16)
         Me.Label14.TabIndex = 52
         Me.Label14.Text = "Sel. Alumno"
-        Me.Label14.Visible = False
+        '
+        'txtPromedio
+        '
+        Me.txtPromedio.Enabled = False
+        Me.txtPromedio.Location = New System.Drawing.Point(372, 137)
+        Me.txtPromedio.MaxLength = 4
+        Me.txtPromedio.Name = "txtPromedio"
+        Me.txtPromedio.Size = New System.Drawing.Size(117, 20)
+        Me.txtPromedio.TabIndex = 43
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(242, 141)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(124, 16)
+        Me.Label15.TabIndex = 42
+        Me.Label15.Text = "Promedio general"
         '
         'frmKardexAlumno
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(780, 429)
+        Me.ClientSize = New System.Drawing.Size(780, 396)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.btnBuscar)
@@ -401,7 +422,7 @@ Partial Class frmKardexAlumno
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.lblNombreID)
         Me.Controls.Add(Me.txtNombre)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnAceptar)
         Me.Name = "frmKardexAlumno"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Consulta de calificaciones"
@@ -436,7 +457,7 @@ Partial Class frmKardexAlumno
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnAceptar As Button
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents lblNombreID As Label
     Friend WithEvents GroupBox1 As GroupBox
@@ -445,4 +466,6 @@ Partial Class frmKardexAlumno
     Friend WithEvents Label13 As Label
     Friend WithEvents btnBuscar As Button
     Friend WithEvents Label14 As Label
+    Friend WithEvents txtPromedio As TextBox
+    Friend WithEvents Label15 As Label
 End Class

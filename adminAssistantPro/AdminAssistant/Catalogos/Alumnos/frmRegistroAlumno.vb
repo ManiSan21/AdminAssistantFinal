@@ -48,44 +48,45 @@ Public Class frmRegistroAlumno
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
 
         'Validaciones
-        If (IsNothing(txtNombre.Text)) Then
+        If String.IsNullOrEmpty(txtNombre.Text) Then
             MessageBox.Show("No se ha ingresado nombre", "Error, falta de información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             txtNombre.Focus()
         Else
-            If (IsNothing(txtDomicilio.Text)) Then
+            If String.IsNullOrEmpty(txtDomicilio.Text) Then
                 MessageBox.Show("No se ha ingresado domicilio", "Error, falta de información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 txtDomicilio.Focus()
             Else
-                If (IsNothing(txtTel.Text)) Then
+                If String.IsNullOrEmpty(txtTel.Text) Then
                     MessageBox.Show("No se ha ingresado teléfono", "Error, falta de información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     txtTel.Focus()
                 Else
-                    If (IsNothing(txtTelEmergencia.Text)) Then
+                    If String.IsNullOrEmpty(txtTelEmergencia.Text) Then
                         MessageBox.Show("No se ha ingresado teléfono de emergencia", "Error, falta de información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                         txtTelEmergencia.Focus()
                     Else
-                        If (IsNothing(txtCiudad.Text)) Then
+                        If String.IsNullOrEmpty(txtCiudad.Text) Then
                             MessageBox.Show("No se ha ingresado ciudad", "Error, falta de información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                             txtCiudad.Focus()
                         Else
-                            If Not cboEscuela.SelectedValue Is Nothing Then
+                            If cboEscuela.SelectedIndex.Equals(-1) Then
                                 MessageBox.Show("No se ha seleccionado escuela", "Error, falta de información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                             Else
-                                If (IsNothing(txtCorreo.Text)) Then
+                                If String.IsNullOrEmpty(txtCorreo.Text) Then
                                     MessageBox.Show("No se ha ingresado correo", "Error, falta de información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                                     txtCorreo.Focus()
                                 Else
                                     If Me.ptbFoto.Image Is Nothing Then
                                         MessageBox.Show("No se ha ingresado foto del alumno", "Error, falta de información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                                     Else
-                                        If IsNothing(txtNoContrlI.Text) Then
+                                        If String.IsNullOrEmpty(txtNoContrlI.Text) Then
                                             MessageBox.Show("No se ha ingresado número de control institucional", "Error, falta de información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                                            txtCorreo.Focus()
+                                            txtNoContrlI.Focus()
                                         Else
                                             'Sección de lógica y sentancias sql
                                             comandoGeneral.CommandText = "INSERT INTO Alumno VALUES(" & CInt(txtNoControl.Text) & "," & CInt(idEscuela) & ",'" & CStr(txtNombre.Text) & "','" & CStr(txtDomicilio.Text) & "','" & CStr(txtCiudad.Text) & "','" & CStr(txtTel.Text) & "','" & CStr(txtTelEmergencia.Text) & "','" & CStr(txtCorreo.Text) & "','" & CStr(ubicacion) & "'," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & "," & 0 & ", '" & txtNoContrlI.Text & "')"
                                             comandoGeneral.ExecuteNonQuery()
                                             MessageBox.Show("¡Datos guardados exitosamente!", "Registro de alumnos", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
                                             'Limpieza de txt
                                             txtNoControl.Text = ""
                                             txtNombre.Text = ""
@@ -96,6 +97,7 @@ Public Class frmRegistroAlumno
                                             txtCorreo.Text = ""
                                             ptbFoto.Image.Dispose()
                                             ptbFoto.Image = Nothing
+                                            txtNoContrlI.Text = ""
 
 
 
@@ -107,6 +109,7 @@ Public Class frmRegistroAlumno
                                             txtCiudad.Enabled = False
                                             txtCorreo.Enabled = False
                                             cboEscuela.Enabled = False
+                                            txtNoContrlI.Enabled = False
 
                                             'botones
                                             btnNuevo.Enabled = True
@@ -145,6 +148,9 @@ Public Class frmRegistroAlumno
         txtCiudad.Enabled = True
         txtCorreo.Enabled = True
         cboEscuela.Enabled = True
+        txtNoContrlI.Enabled = True
+
+        txtNombre.Focus()
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
@@ -163,6 +169,7 @@ Public Class frmRegistroAlumno
         txtCiudad.Enabled = False
         txtCorreo.Enabled = False
         cboEscuela.Enabled = False
+        txtNoContrlI.Enabled = False
 
         'Limpieza de txt
         txtNoControl.Text = ""

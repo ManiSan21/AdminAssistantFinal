@@ -58,6 +58,8 @@ Partial Class frmCalificacion
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnRegistrar = New System.Windows.Forms.Button()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.txtPromedio = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -71,7 +73,6 @@ Partial Class frmCalificacion
         Me.Label14.Size = New System.Drawing.Size(85, 16)
         Me.Label14.TabIndex = 61
         Me.Label14.Text = "Sel. Alumno"
-        Me.Label14.Visible = False
         '
         'btnBuscar
         '
@@ -79,7 +80,7 @@ Partial Class frmCalificacion
         Me.btnBuscar.Location = New System.Drawing.Point(612, 95)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(75, 28)
-        Me.btnBuscar.TabIndex = 60
+        Me.btnBuscar.TabIndex = 2
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
@@ -104,10 +105,12 @@ Partial Class frmCalificacion
         Me.cboNombre.Location = New System.Drawing.Point(279, 143)
         Me.cboNombre.Name = "cboNombre"
         Me.cboNombre.Size = New System.Drawing.Size(291, 21)
-        Me.cboNombre.TabIndex = 57
+        Me.cboNombre.TabIndex = 3
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.txtPromedio)
+        Me.GroupBox1.Controls.Add(Me.Label15)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtNivel1)
         Me.GroupBox1.Controls.Add(Me.txtNivel3)
@@ -153,46 +156,46 @@ Partial Class frmCalificacion
         '
         Me.txtNivel1.Enabled = False
         Me.txtNivel1.Location = New System.Drawing.Point(72, 19)
-        Me.txtNivel1.MaxLength = 3
+        Me.txtNivel1.MaxLength = 4
         Me.txtNivel1.Name = "txtNivel1"
         Me.txtNivel1.Size = New System.Drawing.Size(95, 20)
-        Me.txtNivel1.TabIndex = 3
+        Me.txtNivel1.TabIndex = 4
         '
         'txtNivel3
         '
         Me.txtNivel3.Enabled = False
         Me.txtNivel3.Location = New System.Drawing.Point(464, 19)
-        Me.txtNivel3.MaxLength = 3
+        Me.txtNivel3.MaxLength = 4
         Me.txtNivel3.Name = "txtNivel3"
         Me.txtNivel3.Size = New System.Drawing.Size(95, 20)
-        Me.txtNivel3.TabIndex = 4
+        Me.txtNivel3.TabIndex = 6
         '
         'txtNivel5
         '
         Me.txtNivel5.Enabled = False
         Me.txtNivel5.Location = New System.Drawing.Point(72, 58)
-        Me.txtNivel5.MaxLength = 3
+        Me.txtNivel5.MaxLength = 4
         Me.txtNivel5.Name = "txtNivel5"
         Me.txtNivel5.Size = New System.Drawing.Size(95, 20)
-        Me.txtNivel5.TabIndex = 17
+        Me.txtNivel5.TabIndex = 8
         '
         'txtNivel2
         '
         Me.txtNivel2.Enabled = False
         Me.txtNivel2.Location = New System.Drawing.Point(271, 19)
-        Me.txtNivel2.MaxLength = 3
+        Me.txtNivel2.MaxLength = 4
         Me.txtNivel2.Name = "txtNivel2"
         Me.txtNivel2.Size = New System.Drawing.Size(95, 20)
-        Me.txtNivel2.TabIndex = 18
+        Me.txtNivel2.TabIndex = 5
         '
         'txtNivel4
         '
         Me.txtNivel4.Enabled = False
         Me.txtNivel4.Location = New System.Drawing.Point(643, 19)
-        Me.txtNivel4.MaxLength = 3
+        Me.txtNivel4.MaxLength = 4
         Me.txtNivel4.Name = "txtNivel4"
         Me.txtNivel4.Size = New System.Drawing.Size(95, 20)
-        Me.txtNivel4.TabIndex = 19
+        Me.txtNivel4.TabIndex = 7
         '
         'Label12
         '
@@ -208,10 +211,10 @@ Partial Class frmCalificacion
         '
         Me.txtNivel6.Enabled = False
         Me.txtNivel6.Location = New System.Drawing.Point(271, 58)
-        Me.txtNivel6.MaxLength = 3
+        Me.txtNivel6.MaxLength = 4
         Me.txtNivel6.Name = "txtNivel6"
         Me.txtNivel6.Size = New System.Drawing.Size(95, 20)
-        Me.txtNivel6.TabIndex = 20
+        Me.txtNivel6.TabIndex = 9
         '
         'Label11
         '
@@ -227,10 +230,10 @@ Partial Class frmCalificacion
         '
         Me.txtNivel7.Enabled = False
         Me.txtNivel7.Location = New System.Drawing.Point(464, 58)
-        Me.txtNivel7.MaxLength = 3
+        Me.txtNivel7.MaxLength = 4
         Me.txtNivel7.Name = "txtNivel7"
         Me.txtNivel7.Size = New System.Drawing.Size(95, 20)
-        Me.txtNivel7.TabIndex = 21
+        Me.txtNivel7.TabIndex = 10
         '
         'Label10
         '
@@ -246,10 +249,10 @@ Partial Class frmCalificacion
         '
         Me.txtNivel9.Enabled = False
         Me.txtNivel9.Location = New System.Drawing.Point(72, 101)
-        Me.txtNivel9.MaxLength = 3
+        Me.txtNivel9.MaxLength = 4
         Me.txtNivel9.Name = "txtNivel9"
         Me.txtNivel9.Size = New System.Drawing.Size(95, 20)
-        Me.txtNivel9.TabIndex = 22
+        Me.txtNivel9.TabIndex = 12
         '
         'Label9
         '
@@ -265,10 +268,10 @@ Partial Class frmCalificacion
         '
         Me.txtNivel11.Enabled = False
         Me.txtNivel11.Location = New System.Drawing.Point(464, 101)
-        Me.txtNivel11.MaxLength = 3
+        Me.txtNivel11.MaxLength = 4
         Me.txtNivel11.Name = "txtNivel11"
         Me.txtNivel11.Size = New System.Drawing.Size(95, 20)
-        Me.txtNivel11.TabIndex = 23
+        Me.txtNivel11.TabIndex = 14
         '
         'Label8
         '
@@ -284,10 +287,10 @@ Partial Class frmCalificacion
         '
         Me.txtNivel8.Enabled = False
         Me.txtNivel8.Location = New System.Drawing.Point(643, 58)
-        Me.txtNivel8.MaxLength = 3
+        Me.txtNivel8.MaxLength = 4
         Me.txtNivel8.Name = "txtNivel8"
         Me.txtNivel8.Size = New System.Drawing.Size(95, 20)
-        Me.txtNivel8.TabIndex = 24
+        Me.txtNivel8.TabIndex = 11
         '
         'Label7
         '
@@ -303,10 +306,10 @@ Partial Class frmCalificacion
         '
         Me.txtNivel10.Enabled = False
         Me.txtNivel10.Location = New System.Drawing.Point(271, 101)
-        Me.txtNivel10.MaxLength = 3
+        Me.txtNivel10.MaxLength = 4
         Me.txtNivel10.Name = "txtNivel10"
         Me.txtNivel10.Size = New System.Drawing.Size(95, 20)
-        Me.txtNivel10.TabIndex = 25
+        Me.txtNivel10.TabIndex = 13
         '
         'Label6
         '
@@ -322,10 +325,10 @@ Partial Class frmCalificacion
         '
         Me.txtNivel12.Enabled = False
         Me.txtNivel12.Location = New System.Drawing.Point(643, 101)
-        Me.txtNivel12.MaxLength = 3
+        Me.txtNivel12.MaxLength = 4
         Me.txtNivel12.Name = "txtNivel12"
         Me.txtNivel12.Size = New System.Drawing.Size(95, 20)
-        Me.txtNivel12.TabIndex = 26
+        Me.txtNivel12.TabIndex = 15
         '
         'Label5
         '
@@ -376,7 +379,6 @@ Partial Class frmCalificacion
         Me.lblNombreID.Size = New System.Drawing.Size(87, 16)
         Me.lblNombreID.TabIndex = 55
         Me.lblNombreID.Text = "Ing. nombre"
-        Me.lblNombreID.Visible = False
         '
         'txtNombre
         '
@@ -386,7 +388,7 @@ Partial Class frmCalificacion
         Me.txtNombre.MaxLength = 45
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(291, 26)
-        Me.txtNombre.TabIndex = 54
+        Me.txtNombre.TabIndex = 1
         '
         'PictureBox1
         '
@@ -403,7 +405,7 @@ Partial Class frmCalificacion
         Me.btnNuevo.Location = New System.Drawing.Point(12, 365)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(154, 39)
-        Me.btnNuevo.TabIndex = 53
+        Me.btnNuevo.TabIndex = 16
         Me.btnNuevo.Text = "Nueva act."
         Me.btnNuevo.UseVisualStyleBackColor = True
         '
@@ -413,7 +415,7 @@ Partial Class frmCalificacion
         Me.btnCancelar.Location = New System.Drawing.Point(411, 365)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(154, 39)
-        Me.btnCancelar.TabIndex = 62
+        Me.btnCancelar.TabIndex = 18
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
@@ -422,7 +424,7 @@ Partial Class frmCalificacion
         Me.btnSalir.Location = New System.Drawing.Point(596, 365)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(160, 39)
-        Me.btnSalir.TabIndex = 63
+        Me.btnSalir.TabIndex = 19
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
         '
@@ -432,9 +434,28 @@ Partial Class frmCalificacion
         Me.btnRegistrar.Location = New System.Drawing.Point(215, 365)
         Me.btnRegistrar.Name = "btnRegistrar"
         Me.btnRegistrar.Size = New System.Drawing.Size(154, 39)
-        Me.btnRegistrar.TabIndex = 64
+        Me.btnRegistrar.TabIndex = 17
         Me.btnRegistrar.Text = "Registrar"
         Me.btnRegistrar.UseVisualStyleBackColor = True
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(242, 141)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(124, 16)
+        Me.Label15.TabIndex = 40
+        Me.Label15.Text = "Promedio general"
+        '
+        'txtPromedio
+        '
+        Me.txtPromedio.Enabled = False
+        Me.txtPromedio.Location = New System.Drawing.Point(372, 137)
+        Me.txtPromedio.MaxLength = 4
+        Me.txtPromedio.Name = "txtPromedio"
+        Me.txtPromedio.Size = New System.Drawing.Size(117, 20)
+        Me.txtPromedio.TabIndex = 41
         '
         'frmCalificacion
         '
@@ -501,4 +522,6 @@ Partial Class frmCalificacion
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnSalir As Button
     Friend WithEvents btnRegistrar As Button
+    Friend WithEvents txtPromedio As TextBox
+    Friend WithEvents Label15 As Label
 End Class

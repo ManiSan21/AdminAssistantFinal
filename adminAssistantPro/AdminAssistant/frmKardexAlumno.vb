@@ -8,6 +8,7 @@
             Dim cantAlumno = comandoGeneral.ExecuteScalar
 
             If cantAlumno > 0 Then
+                txtNombre.Focus()
             Else
                 Conexion.Close()
                 MessageBox.Show("NO HAY ALUMNOS REGISTRADOS", "FAVOR DE VERIFICAR INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -99,6 +100,7 @@
             txtNivel12.Text = lectorGeneral(11)
         End While
         lectorGeneral.Close()
+        txtPromedio.Text = (CInt(txtNivel1.Text) + CInt(txtNivel2.Text) + CInt(txtNivel3.Text) + CInt(txtNivel4.Text) + CInt(txtNivel5.Text) + CInt(txtNivel6.Text) + CInt(txtNivel7.Text) + CInt(txtNivel8.Text) + CInt(txtNivel9.Text) + CInt(txtNivel10.Text) + CInt(txtNivel11.Text) + CInt(txtNivel12.Text)) / 12
     End Sub
 
     Private Sub txtNombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNombre.KeyPress
@@ -120,7 +122,7 @@
         lectorGeneral.Close()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
         Conexion.Close()
         txtNivel1.Text = ""
         txtNivel2.Text = ""
@@ -134,6 +136,7 @@
         txtNivel10.Text = ""
         txtNivel11.Text = ""
         txtNivel12.Text = ""
+        txtNombre.Text = ""
         Me.Dispose()
 
     End Sub
