@@ -83,4 +83,16 @@ Public Class principal
     Private Sub EditarAlumnoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditarAlumnoToolStripMenuItem.Click
         frmEditarAlumno.ShowDialog()
     End Sub
+
+    Private Sub RegistrarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrarToolStripMenuItem.Click
+        frmRegistrarEscuela.showDialog()
+    End Sub
+
+    Private Sub ConsultarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarToolStripMenuItem.Click
+        frmConsultaEscuelas.showDialog()
+    End Sub
+
+    Private Sub EditarToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles EditarToolStripMenuItem1.Click
+        frmEditarEscuela.showDialog()
+    End Sub
 End Class

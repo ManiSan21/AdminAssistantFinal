@@ -106,10 +106,28 @@
     <Compile Include="Catalogos\Alumnos\frmRegistroAlumno.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmConsultaEscuelas.Designer.vb">
+      <DependentUpon>frmConsultaEscuelas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaEscuelas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarEscuela.Designer.vb">
+      <DependentUpon>frmEditarEscuela.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarEscuela.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmKardexAlumno.Designer.vb">
       <DependentUpon>frmKardexAlumno.vb</DependentUpon>
     </Compile>
     <Compile Include="frmKardexAlumno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarEscuela.Designer.vb">
+      <DependentUpon>frmRegistrarEscuela.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarEscuela.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Module1.vb" />
@@ -154,8 +172,17 @@
     <EmbeddedResource Include="Catalogos\Alumnos\frmRegistroAlumno.resx">
       <DependentUpon>frmRegistroAlumno.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaEscuelas.resx">
+      <DependentUpon>frmConsultaEscuelas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarEscuela.resx">
+      <DependentUpon>frmEditarEscuela.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmKardexAlumno.resx">
       <DependentUpon>frmKardexAlumno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarEscuela.resx">
+      <DependentUpon>frmRegistrarEscuela.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Movimientos\frmCalificacion.resx">
       <DependentUpon>frmCalificacion.vb</DependentUpon>

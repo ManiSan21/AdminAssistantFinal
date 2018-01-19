@@ -37,6 +37,10 @@ Partial Class principal
         Me.ConsultaGeneralToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditarAlumnoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EscuelasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsultarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MovimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CalificacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ActualizarCalificaciònToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -86,7 +90,7 @@ Partial Class principal
         '
         'CatálogosToolStripMenuItem
         '
-        Me.CatálogosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AlumnosToolStripMenuItem2})
+        Me.CatálogosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AlumnosToolStripMenuItem2, Me.EscuelasToolStripMenuItem})
         Me.CatálogosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.CatálogosToolStripMenuItem.Name = "CatálogosToolStripMenuItem"
         Me.CatálogosToolStripMenuItem.Size = New System.Drawing.Size(219, 43)
@@ -136,6 +140,31 @@ Partial Class principal
         Me.EditarAlumnoToolStripMenuItem.Name = "EditarAlumnoToolStripMenuItem"
         Me.EditarAlumnoToolStripMenuItem.Size = New System.Drawing.Size(309, 44)
         Me.EditarAlumnoToolStripMenuItem.Text = "Editar alumno"
+        '
+        'EscuelasToolStripMenuItem
+        '
+        Me.EscuelasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarToolStripMenuItem, Me.ConsultarToolStripMenuItem, Me.EditarToolStripMenuItem1})
+        Me.EscuelasToolStripMenuItem.Name = "EscuelasToolStripMenuItem"
+        Me.EscuelasToolStripMenuItem.Size = New System.Drawing.Size(225, 44)
+        Me.EscuelasToolStripMenuItem.Text = "Escuelas"
+        '
+        'RegistrarToolStripMenuItem
+        '
+        Me.RegistrarToolStripMenuItem.Name = "RegistrarToolStripMenuItem"
+        Me.RegistrarToolStripMenuItem.Size = New System.Drawing.Size(240, 44)
+        Me.RegistrarToolStripMenuItem.Text = "Registrar"
+        '
+        'ConsultarToolStripMenuItem
+        '
+        Me.ConsultarToolStripMenuItem.Name = "ConsultarToolStripMenuItem"
+        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(240, 44)
+        Me.ConsultarToolStripMenuItem.Text = "Consultar"
+        '
+        'EditarToolStripMenuItem1
+        '
+        Me.EditarToolStripMenuItem1.Name = "EditarToolStripMenuItem1"
+        Me.EditarToolStripMenuItem1.Size = New System.Drawing.Size(240, 44)
+        Me.EditarToolStripMenuItem1.Text = "Editar"
         '
         'MovimientosToolStripMenuItem
         '
@@ -227,4 +256,8 @@ Partial Class principal
     Friend WithEvents ConsultaGeneralToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EditarAlumnoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EscuelasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegistrarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ConsultarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EditarToolStripMenuItem1 As ToolStripMenuItem
 End Class

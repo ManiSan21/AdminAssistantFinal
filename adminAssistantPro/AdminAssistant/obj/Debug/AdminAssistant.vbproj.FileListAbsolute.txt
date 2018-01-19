@@ -131,3 +131,6 @@ C:\Users\Mani\Documents\GitHub\AdminAssistantFinal\adminAssistantPro\AdminAssist
 C:\Users\Diego\Documents\GitHub\AdminAssistantFinal\adminAssistantPro\AdminAssistant\obj\Debug\AdminAssistant.frmEditarAlumno.resources
 C:\Users\Diego\Documents\GitHub\AdminAssistantFinal\adminAssistantPro\AdminAssistant\obj\Debug\AdminAssistant.frmConsultaIndividual.resources
 C:\Users\Diego\Documents\GitHub\AdminAssistantFinal\adminAssistantPro\AdminAssistant\obj\Debug\AdminAssistant.frmCalificacion.resources
+C:\Users\Diego\Documents\GitHub\AdminAssistantFinal\adminAssistantPro\AdminAssistant\obj\Debug\AdminAssistant.frmRegistrarEscuela.resources
+C:\Users\Diego\Documents\GitHub\AdminAssistantFinal\adminAssistantPro\AdminAssistant\obj\Debug\AdminAssistant.frmConsultaEscuelas.resources
+C:\Users\Diego\Documents\GitHub\AdminAssistantFinal\adminAssistantPro\AdminAssistant\obj\Debug\AdminAssistant.frmEditarEscuela.resources
