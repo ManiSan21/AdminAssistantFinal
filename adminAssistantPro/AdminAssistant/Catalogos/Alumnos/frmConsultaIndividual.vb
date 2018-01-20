@@ -12,6 +12,7 @@
             Dim cantAlumno = comandoGeneral.ExecuteScalar
 
             If cantAlumno > 0 Then
+
             Else
                 Conexion.Close()
                 MessageBox.Show("NO HAY ALUMNOS REGISTRADOS", "FAVOR DE VERIFICAR INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -19,7 +20,7 @@
 
         Catch ex As Exception
             Conexion.Close()
-            MessageBox.Show("PROBLEMAS DE CONEXIÒN", "NO SE PUDO ACCEDER A LA BASE DE DATOS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("PROBLEMAS DE CONEXIÓN", "NO SE PUDO ACCEDER A LA BASE DE DATOS", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 

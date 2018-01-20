@@ -23,66 +23,27 @@ Partial Class frmConsultaAlumnos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.dgConsultaG = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.clmIdEscuela = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgConsultaG, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgConsultaG
         '
         Me.dgConsultaG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgConsultaG.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6})
+        Me.dgConsultaG.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.clmIdEscuela, Me.Column2, Me.Column3, Me.Column5, Me.Column4})
         Me.dgConsultaG.Location = New System.Drawing.Point(3, 62)
         Me.dgConsultaG.Name = "dgConsultaG"
         Me.dgConsultaG.Size = New System.Drawing.Size(917, 221)
         Me.dgConsultaG.TabIndex = 0
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "IdAlumno"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Nombre"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 200
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Domicilio"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        Me.Column3.Width = 200
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Télefono"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        Me.Column4.Width = 150
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Situación"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Último nivel acreditado"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
         '
         'Label2
         '
@@ -135,6 +96,44 @@ Partial Class frmConsultaAlumnos
         Me.Label3.TabIndex = 69
         Me.Label3.Text = "alumnos"
         '
+        'Column1
+        '
+        Me.Column1.HeaderText = "IdAlumno"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'clmIdEscuela
+        '
+        Me.clmIdEscuela.HeaderText = "IdEscuela"
+        Me.clmIdEscuela.Name = "clmIdEscuela"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Nombre"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 200
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Domicilio"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 200
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Ciudad"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Télefono"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 150
+        '
         'frmConsultaAlumnos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -159,9 +158,9 @@ Partial Class frmConsultaAlumnos
     Friend WithEvents btnSalir As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents clmIdEscuela As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
 End Class
